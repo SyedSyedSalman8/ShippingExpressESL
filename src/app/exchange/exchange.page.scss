@@ -1,0 +1,11 @@
+table{
+    background-color: green($color: #000000);
+}
+
+ion-content {
+    --background: url('../../assets/bgimage1.jpg');
+  }
+
+  a{
+      color: green($color: #ce2da6) !important;
+  }

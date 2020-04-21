@@ -18,4 +18,8 @@ export class ServiceService {
   getNews() {
     return this.http.get(this.baseUrl + 'news-api/api/post/news/get_all.php');
   }
+
+  getExchangeRates() {
+    return this.http.get(this.baseUrl + 'api/api/post/get_forex.php');
+  }
 }
