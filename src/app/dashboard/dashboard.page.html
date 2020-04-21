@@ -1,0 +1,86 @@
+<ion-header [translucent]="true" style="background-color: yellowgreen;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img src="../../assets/emirates"   alt="">
+  <div style="background-color: yellowgreen; height: 50px;">
+     <p style="text-align: center; vertical-align: middle; line-height: 50px;">
+     Welcome to Express Shipping
+    </p>
+  </div>
+
+<ion-grid>
+  <ion-row>
+    <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+ 
+    <ion-avatar (click)="goToQuery()">
+      <img src="../../assets/download.png">
+    </ion-avatar>
+    <ion-label>Query</ion-label>
+ 
+</ion-col>
+
+<ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+ 
+  <ion-avatar>
+    <img src="../../assets/79775074_2702225679816625_7929367247485665280_o.jpg">
+  </ion-avatar>
+  <ion-label>Chip Avatar</ion-label>
+
+</ion-col>
+
+<ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+ 
+  <ion-avatar>
+    <img src="../../assets/79775074_2702225679816625_7929367247485665280_o.jpg">
+  </ion-avatar>
+  <ion-label>Chip Avatar</ion-label>
+
+</ion-col>
+
+
+</ion-row>
+
+<ion-row>
+  <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
+ 
+    <ion-avatar>
+      <img (click)="goToNews()" src="../../assets/icon-70-512.webp">
+    </ion-avatar>
+    <ion-label>Advisory</ion-label>
+ 
+</ion-col>
+
+<ion-col  style="margin-left: 5%; margin-bottom: 60px;">
+ 
+  <ion-avatar>
+    <img src="../../assets/79775074_2702225679816625_7929367247485665280_o.jpg">
+  </ion-avatar>
+  <ion-label>Chip Avatar</ion-label>
+
+</ion-col>
+
+    <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
+ 
+    <ion-avatar>
+      <img src="../../assets/79775074_2702225679816625_7929367247485665280_o.jpg">
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+ 
+</ion-col>
+
+
+</ion-row>
+
+</ion-grid>
+</ion-content>
+
+<ion-footer style="background-color:yellowgreen;"> 
+<p style="color: black; text-align: center;">all rights reserved 2020</p>
+</ion-footer>

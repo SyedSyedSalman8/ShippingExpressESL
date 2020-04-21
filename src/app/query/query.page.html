@@ -1,0 +1,47 @@
+
+<ion-header [translucent]="true" style="background-color: yellowgreen;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Query</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+<form #queryForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="newQuery()">
+ <ion-item style="margin-bottom: 18px; margin-top: 20px;">
+    <ion-label  position="stacked">Name <span style="color: red;">*</span></ion-label>
+    <ion-input name = "name"></ion-input>
+  </ion-item>
+
+ <ion-item style="margin-bottom: 18px;">
+    <ion-label  position="stacked">Email <span style="color: red;">*</span></ion-label>
+    <ion-input name="email"></ion-input>
+  </ion-item>
+
+ <ion-item style="margin-bottom: 18px;">
+    <ion-label position="stacked">Phone <span style="color: red;">*</span></ion-label>
+    <ion-input type="number" name="phone" ></ion-input>
+  </ion-item>
+
+ <ion-item style="margin-bottom: 18px;">
+    <ion-label position="stacked">Organization</ion-label>
+    <ion-input name="org"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-bottom: 18px;">
+    <ion-label position="stacked">Subject</ion-label>
+    <ion-input name="subject"></ion-input>
+  </ion-item>
+
+ <ion-item style="margin-bottom: 18px;">
+    <ion-label position="stacked">Message <span style="color: red;">*</span></ion-label>
+    <ion-textarea name="message" required ></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Submit</ion-button>
+
+</form>
+</ion-content>

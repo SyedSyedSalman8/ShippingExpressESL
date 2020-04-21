@@ -13,14 +13,19 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Dashboard',
+      url: '/dashboard',
+      icon: 'clipboard'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Query',
+      url: '/query',
+      icon: 'help'
+    },
+    {
+      title: 'Advisory',
+      url: '/news',
+      icon: 'newspaper'
     },
     {
       title: 'Favorites',
@@ -56,7 +61,7 @@ export class AppComponent implements OnInit {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.splashScreen.show();
     });
   }
 
