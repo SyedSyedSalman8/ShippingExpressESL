@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'exchange',
     loadChildren: () => import('./exchange/exchange.module').then( m => m.ExchangePageModule)
+  },
+  {
+    path: 'rates',
+    loadChildren: () => import('./rates/rates.module').then( m => m.RatesPageModule)
   }
 ];
 

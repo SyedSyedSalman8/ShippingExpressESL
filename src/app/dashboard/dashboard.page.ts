@@ -26,4 +26,7 @@ export class DashboardPage implements OnInit {
     this.navCtrl.navigateForward('/news');
   }
 
+  goToRates() {
+    this.navCtrl.navigateForward('/rates');
+  }
 }

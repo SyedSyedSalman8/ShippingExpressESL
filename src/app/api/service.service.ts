@@ -22,4 +22,12 @@ export class ServiceService {
   getExchangeRates() {
     return this.http.get(this.baseUrl + 'api/api/post/get_forex.php');
   }
+
+  getPolPod() {
+    return this.http.get(this.baseUrl + 'api/api/post/v2/getRatesPolPod.php');
+  }
+
+  getContainerRates() {
+    return this.http.get(this.baseUrl + 'api/api/post/getRates.php');
+  }
 }

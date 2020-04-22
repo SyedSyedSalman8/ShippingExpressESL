@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertifyService } from './api/alertify.service';
 import { NgxLinkifyjsModule } from 'ngx-linkifyjs';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
    declarations: [
@@ -26,7 +26,8 @@ import { NgxLinkifyjsModule } from 'ngx-linkifyjs';
       FormsModule,
       ReactiveFormsModule,
       HttpClientModule,
-      NgxLinkifyjsModule.forRoot()
+      NgxLinkifyjsModule.forRoot(),
+      Ng2SearchPipeModule
    ],
    providers: [
       StatusBar,
