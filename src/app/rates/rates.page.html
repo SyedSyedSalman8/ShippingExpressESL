@@ -25,8 +25,8 @@
   
   <ion-button #populateData (click)="getContainerRates()" expand="full" type="submit">Search Container Rates</ion-button>
 
-  <div *ngFor="let data1 of data1">
-    <p> {{data1.pol}} </p>
+  <div *ngFor="let data of data1">
+    <p> {{data.pol}} </p>
   </div>
 
 </ion-content>
