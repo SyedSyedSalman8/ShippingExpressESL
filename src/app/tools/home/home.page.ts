@@ -16,4 +16,12 @@ export class HomePage implements OnInit {
   goToFeedback() {
     this.navCtrl.navigateForward('/feedback');
   }
+
+  goToAbout() {
+    this.navCtrl.navigateForward('/about');
+  }
+
+  goToContact() {
+    this.navCtrl.navigateForward('/contact');
+  }
 }
