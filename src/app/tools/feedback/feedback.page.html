@@ -1,0 +1,53 @@
+<ion-header [translucent]="true" style="background-color: yellowgreen;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
+  <p style="text-align: center;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;">How was your experience?</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+   
+      <ion-avatar (click)="setReactValue1()">
+        <img src="../../../assets/happy.png">
+      </ion-avatar>
+      </ion-col>
+  
+      <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+   
+        <ion-avatar (click)="setReactValue2()">
+          <img src="../../../assets/okay.png">
+        </ion-avatar>
+        </ion-col>
+        
+        <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
+   
+          <ion-avatar (click)="setReactValue3()">
+            <img src="../../../assets/sad.png">
+          </ion-avatar>
+          </ion-col>
+
+      </ion-row>
+      <ion-label>Comment</ion-label>
+      <ion-row style="margin-bottom: 10%;">
+        
+        <ion-textarea formControlName="feedback" style="border-color: black; border-radius: 10px; border-style: double; height: 150px;"  placeholder="Optional.."></ion-textarea>
+      </ion-row>
+
+      <ion-label >Email</ion-label>
+      <ion-row>
+        <ion-input formControlName="email" style="border-color: black; border-radius: 10px; border-style: double;"  placeholder="Optional.."></ion-input>
+      </ion-row>
+      </ion-grid>
+      <ion-button style="margin-top: 10%;" expand="block" color="success" type="submit">Submit Feedback</ion-button>
+      <input [hidden]="true" type="text" formControlName="feedbackRating" >
+    </form>
+</ion-content>

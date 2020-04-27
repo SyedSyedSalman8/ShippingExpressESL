@@ -1,6 +1,6 @@
  div:nth-child(even) 
 {
-    background-color: lightblue;
+    background-color: lightgrey;
     width: 100%;
 }
 div:nth-child(odd)
@@ -8,3 +8,14 @@ div:nth-child(odd)
      background-color: grey;
      width: 100%;
     }
+
+    ion-content {
+        --background: url('../../assets/bgimage3.jpeg')  fixed ;
+        top: 0; 
+        left: 0; 
+	
+  /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    
+      }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Query } from '../_models/query';
+import { Feedback } from '../_models/feedback';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,9 @@ export class ServiceService {
 
   getContainerRates() {
     return this.http.get(this.baseUrl + 'api/api/post/getRates.php');
+  }
+
+  sendFeedback(feedback: Feedback) {
+    return this.http.post(this.baseUrl + 'api/api/post/feedback.php', feedback);
   }
 }

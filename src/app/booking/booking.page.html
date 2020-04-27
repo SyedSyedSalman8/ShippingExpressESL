@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" style="background-color: yellowgreen;">
+<ion-header [translucent]="true" style="background-color: lightgrey;">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -10,51 +10,262 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="5" style="background-color: yellowgreen;">
+      <ion-col size="5" style="background-color: lightgrey;">
         Description
       </ion-col>
 
-      <ion-col size="7" style="background-color: yellowgreen;">
-        Information
+      <ion-col size="7" style="background-color: lightgrey;">
+       Information
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col size="5" style="background-color: yellowgreen;">
-        Customer Name
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Customer Name
+        </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: yellowgreen;">
-        <ion-input> </ion-input>
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Volume
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="2f">20ft</ion-select-option>
+            <ion-select-option value="4f">40ft</ion-select-option>
+            <ion-select-option value="H">40HC</ion-select-option>
+            <ion-select-option value="A">AIR</ion-select-option>
+            <ion-select-option value="L">LCL</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Terms
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="C">CNF</ion-select-option>
+            <ion-select-option value="F">FOB</ion-select-option>
+            <ion-select-option value="E">ExWorks</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> BL Mentioned
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="P">Prepaid</ion-select-option>
+            <ion-select-option value="C">Collect</ion-select-option>
+            
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+    <ion-item-divider>
+    </ion-item-divider>
+    
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Trade Lane
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="I">Import</ion-select-option>
+            <ion-select-option value="E">Export Select</ion-select-option>
+            
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Port Of Loading
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="I">Import</ion-select-option>
+            
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Port of Discharge
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="I">Import</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-item-divider></ion-item-divider>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Supplier Details
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="5" style="background-color: yellowgreen;">
-        Description
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> CNEE Details
+        </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: yellowgreen;">
-        Information
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="5" style="background-color: yellowgreen;">
-        Description
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Notify/CNEE
+        </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: yellowgreen;">
-        Information
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
       </ion-col>
     </ion-row>
+
+    <ion-item-divider></ion-item-divider>
+
     <ion-row>
-      <ion-col size="5" style="background-color: yellowgreen;">
-        Description
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Desp/Commodity
+        </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: yellowgreen;">
-        Information
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
       </ion-col>
     </ion-row>
-  </ion-grid>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Gross Weight(KGS)
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea>  </ion-textarea>
+      </ion-col>
+    </ion-row>
+
+    <ion-item-divider></ion-item-divider>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Encashment Certificate
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="C">Available</ion-select-option>
+            <ion-select-option value="F">Pay Encashment Charges</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> FTA Certificate
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="C">YES (Required)</ion-select-option>
+            <ion-select-option value="F">Not Required</ion-select-option>
+            <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Certificate of Origin (COO)
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="C">YES (Required)</ion-select-option>
+            <ion-select-option value="F">Not Required</ion-select-option>
+            <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Export License (Origin)
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        
+          <ion-select placeholder="Select One">
+            <ion-select-option value="C">YES (Required)</ion-select-option>
+            <ion-select-option value="F">Not Required</ion-select-option>
+            <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
+          </ion-select>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-item-divider>
+      <label style="font-size: small;">Any Other Requirement (Please mention below)</label>
+    </ion-item-divider>
+    
+    <ion-textarea placeholder="write here.."></ion-textarea>
+
+    <ion-button expand="full" type="submit">Submit</ion-button>
+    </ion-grid>
 
 </ion-content>

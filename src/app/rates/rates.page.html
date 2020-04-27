@@ -10,23 +10,28 @@
 <ion-content>
   <ion-item style="margin-bottom: 18px; margin-top: 20px;">
     <ion-label  position="stacked">POL: </ion-label>
-    <ion-input ng-focus="focused = true" ng-blur="focused = false" [(ngModel)]="term" placeholder="Search POL" name = "pol"></ion-input>
-    <div *ngFor="let data of data?.pols| filter:term">
-    {{data.name}} 
+    <ion-input [(ngModel)]="term" (keyup)="toggle()" placeholder="Search POL" name = "pol"></ion-input>
+    <div  (click)=edit(data?.name) *ngFor="let data of data?.pols| filter:term">
+    <p *ngIf="show === true">
+      {{data.name}}
+    </p> 
   </div>
 </ion-item>
   <ion-item style="margin-bottom: 18px; margin-top: 20px;">
     <ion-label  position="stacked">POD: </ion-label>
-    <ion-input placeholder="Search POD" [(ngModel)]="term1" name = "pod"></ion-input>
-    <div *ngFor="let data of data?.pods| filter:term1">
-      {{data.name}} 
+    <ion-input (keyup)="toggle1()" placeholder="Search POD" [(ngModel)]="term1" name = "pod"></ion-input>
+    <div (click)=edit1(data?.name) *ngFor="let data of data?.pods| filter:term1">
+    <p *ngIf="show1 === true">
+        {{data.name}} 
+      </p>
     </div>
   </ion-item>
   
-  <ion-button #populateData (click)="getContainerRates()" expand="full" type="submit">Search Container Rates</ion-button>
+  <div (click)="getContainerRates()">
+  <ion-button #populateData  expand="full" type="submit">Search Container Rates</ion-button>
 
   <div *ngFor="let data of data1">
-    <p> {{data.pol}} </p>
+    <p *ngIf="term === data.pol && term1 === data.pod"> {{data.idx}} {{data.pod}} </p>
   </div>
-
+</div>
 </ion-content>
