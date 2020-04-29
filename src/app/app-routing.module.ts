@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./tools/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'calculator',
+    loadChildren: () => import('./tools/calculator/calculator.module').then( m => m.CalculatorPageModule)
   }
 ];
 

@@ -24,4 +24,8 @@ export class HomePage implements OnInit {
   goToContact() {
     this.navCtrl.navigateForward('/contact');
   }
+
+  goToCalc() {
+    this.navCtrl.navigateForward('/calculator');
+  }
 }

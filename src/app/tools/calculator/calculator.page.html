@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" style="background-color: yellowgreen;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  (ngSubmit)="calculateCBM()" >
+  <ion-item>
+    <ion-label position="stacked" >Length(cm)</ion-label>
+    <ion-input [(ngModel)]="length" name="length" type="number"></ion-input>
+  </ion-item>
+
+
+<ion-item>
+<ion-label position="stacked" >Width (cm)</ion-label> 
+<ion-input [(ngModel)]="width" name="width" type="number"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label position="stacked" >Height (cm)</ion-label> 
+<ion-input [(ngModel)]="height" name="height" type="number"></ion-input>
+</ion-item>
+<ion-button style="margin-top: 10%;" expand="block" color="success" type="submit">Calculate CBM</ion-button>
+<ion-item>
+  <ion-label style="text-align: center;" position="stacked" >CBM m<sup>3</sup></ion-label> 
+  <p style="text-align: center;" type="number" >{{cbm}}</p>
+  </ion-item>
+</form>
+</ion-content>
