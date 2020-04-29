@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ServiceService } from '../api/service.service';
+import { NavController, Platform } from '@ionic/angular';
 
 
 @Component({
@@ -14,11 +15,24 @@ export class RatesPage implements OnInit {
   term1: string;
   show: any;
   show1: any;
-  constructor(private service: ServiceService) { }
+  subscription: any;
+  constructor(private service: ServiceService, private platform: Platform, private navCtrl: NavController) { }
 
   ngOnInit() {
     this.service.getPolPod().subscribe((data: (any)) => this.data = data);
   }
+
+  ionViewDidEnter() {
+    this.subscription = this.platform.backButton.subscribe(() => {
+        // tslint:disable-next-line: no-string-literal
+        this.navCtrl.navigateForward('/dashboard');
+    });
+}
+
+ionViewWillLeave() {
+  this.subscription.unsubscribe();
+}
+
 
   getContainerRates() {
     this.service.getContainerRates().subscribe(data => this.data1 = data);

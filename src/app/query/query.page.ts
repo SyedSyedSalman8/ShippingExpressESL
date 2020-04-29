@@ -3,7 +3,7 @@ import { ServiceService } from '../api/service.service';
 import { Router } from '@angular/router';
 import { Query } from '../_models/query';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ToastController } from '@ionic/angular';
+import { ToastController, Platform, NavController } from '@ionic/angular';
 import { AlertifyService } from '../api/alertify.service';
 
 @Component({
@@ -14,8 +14,22 @@ import { AlertifyService } from '../api/alertify.service';
 export class QueryPage implements OnInit {
   queryForm: FormGroup;
   query: Query;
+  subscription: any;
   constructor(private service: ServiceService, private router: Router,
-              public toast: ToastController, private alertify: AlertifyService) { }
+              public toast: ToastController, private alertify: AlertifyService,
+              private platform: Platform, private navCtrl: NavController) { }
+
+              ionViewDidEnter() {
+                this.subscription = this.platform.backButton.subscribe(() => {
+                    // tslint:disable-next-line: no-string-literal
+                    this.navCtrl.navigateForward('/dashboard');
+                });
+            }
+
+            ionViewWillLeave() {
+              this.subscription.unsubscribe();
+            }
+
 
   ngOnInit() {
     this.queryForm = new FormGroup({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,22 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-  constructor(private navCtrl: NavController) { }
+  subscription: any;
+  constructor(private navCtrl: NavController, private platform: Platform) { }
 
   ngOnInit() {
   }
+
+  ionViewDidEnter() {
+    this.subscription = this.platform.backButton.subscribe(() => {
+        // tslint:disable-next-line: no-string-literal
+        this.navCtrl.navigateForward('/dashboard');
+    });
+}
+
+ionViewWillLeave() {
+  this.subscription.unsubscribe();
+}
 
   goToFeedback() {
     this.navCtrl.navigateForward('/feedback');
