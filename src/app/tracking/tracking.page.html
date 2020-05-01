@@ -1,0 +1,28 @@
+<ion-header [translucent]="true" style="background-color: yellowgreen;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tracking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">RO #</ion-label>
+  <ion-select placeholder="RO#">
+    <ion-select-option value="C">FCL</ion-select-option>
+    <ion-select-option value="F">LCL</ion-select-option>
+    <ion-select-option value="F">AIR</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Mobile #</ion-label>
+  <ion-input type="number">
+
+  </ion-input>
+</ion-item>
+<ion-button style="margin-top: 10%;" expand="block" color="success" type="submit">Track</ion-button>
+</ion-content>

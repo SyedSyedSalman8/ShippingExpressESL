@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'calculator',
     loadChildren: () => import('./tools/calculator/calculator.module').then( m => m.CalculatorPageModule)
+  },
+  {
+    path: 'tracking',
+    loadChildren: () => import('./tracking/tracking.module').then( m => m.TrackingPageModule)
   }
 ];
 

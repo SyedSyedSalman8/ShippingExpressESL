@@ -50,4 +50,8 @@ ionViewWillLeave() {
   goToTools() {
     this.navCtrl.navigateForward('/home');
   }
+
+  goToTracking() {
+    this.navCtrl.navigateForward('/tracking');
+  }
 }
