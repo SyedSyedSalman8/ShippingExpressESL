@@ -33,12 +33,12 @@ export class QueryPage implements OnInit {
 
   ngOnInit() {
     this.queryForm = new FormGroup({
-      name: new FormControl(),
       email: new FormControl(),
+      name: new FormControl(),
       phone: new FormControl(),
       org: new FormControl(),
       sub: new FormControl(),
-      message: new FormControl()
+      msg: new FormControl()
     });
   }
 

@@ -4,6 +4,6 @@ export interface Query {
     phone: number;
     org: string;
     sub: string;
-    message: string;
+    msg: string;
 
 }
