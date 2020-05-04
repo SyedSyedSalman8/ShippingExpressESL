@@ -37,7 +37,7 @@ export class ServiceService {
   }
 
   sendFeedback(feedback: Feedback) {
-    return this.http.post(this.baseUrl + 'api/api/post/feedback.php', feedback);
+    return this.http.post(this.baseUrl + 'api/api/post/feedback.php', feedback, this.httpOptions);
   }
 
   newBooking() {}
