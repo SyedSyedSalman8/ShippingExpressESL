@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Query } from '../_models/query';
 import { Feedback } from '../_models/feedback';
 
@@ -12,8 +12,12 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
+  };
+
   newQuery(query: Query) {
-    return this.http.post(this.baseUrl + 'api/api/post/email.php', query);
+    return this.http.post<Query>(this.baseUrl + 'api/api/post/email.php', query, this.httpOptions);
   }
 
   getNews() {
@@ -35,4 +39,6 @@ export class ServiceService {
   sendFeedback(feedback: Feedback) {
     return this.http.post(this.baseUrl + 'api/api/post/feedback.php', feedback);
   }
+
+  newBooking() {}
 }

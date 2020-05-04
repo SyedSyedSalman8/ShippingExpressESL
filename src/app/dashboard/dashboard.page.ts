@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Query } from '@angular/compiler/src/core';
 import { QueryPage } from '../query/query.page';
@@ -15,7 +15,7 @@ export class DashboardPage implements OnInit {
   query: QueryPage;
   subscription: any;
   constructor(private activatedRoute: ActivatedRoute,
-              private navCtrl: NavController, private platform: Platform) { }
+              private navCtrl: NavController, private router: Router, private platform: Platform) { }
 
   ngOnInit() {
 
@@ -33,7 +33,8 @@ ionViewWillLeave() {
 }
 
   goToQuery() {
-    this.navCtrl.navigateForward('/query');
+    // this.navCtrl.navigateForward('/query');
+    this.router.navigate(['/query']);
   }
 
   goToNews() {
