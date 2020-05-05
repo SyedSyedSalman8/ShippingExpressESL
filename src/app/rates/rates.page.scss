@@ -9,6 +9,10 @@ div:nth-child(odd)
      width: 100%;
     }
 
+ion-item {
+  background-color: lightgrey;
+}
+
     ion-content {
         --background: url('../../assets/bgimage3.jpeg')  fixed ;
         top: 0; 

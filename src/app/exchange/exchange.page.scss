@@ -10,3 +10,19 @@ ion-content {
   a{
       color: green($color: #ce2da6) !important;
   }
+
+  .rtHeader.rtHeaderCurr {
+      text-align: left;
+  }
+  td:nth-child(even) 
+  {
+      background-color: lightgrey;
+      width: 100%;
+  }
+  td:nth-child(odd)
+   {
+       background-color: grey;
+       width: 100%;
+      }
+  
+
