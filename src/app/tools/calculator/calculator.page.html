@@ -24,10 +24,30 @@
 <ion-label position="stacked" >Height (cm)</ion-label> 
 <ion-input [(ngModel)]="height" name="height" type="number"></ion-input>
 </ion-item>
+<ion-item>
+  <ion-label position="stacked" >Weight (kg)</ion-label> 
+  <ion-input [(ngModel)]="weight" name="weight" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked" >Quantity </ion-label> 
+    <ion-input [(ngModel)]="qty" name="qty" type="number"></ion-input>
+    </ion-item>
 <ion-button style="margin-top: 10%;" expand="block" color="success" type="submit">Calculate CBM</ion-button>
 <ion-item>
   <ion-label style="text-align: center;" position="stacked" >CBM m<sup>3</sup></ion-label> 
   <p style="text-align: center;" type="number" >{{cbm}}</p>
   </ion-item>
+  <ion-item>
+  <ion-label style="text-align: center;" position="stacked" >Total Volume m<sup>3</sup></ion-label> 
+  <p style="text-align: center;" type="number" >{{volume}}</p>
+  </ion-item>
+  <ion-item>
+    <ion-label style="text-align: center;" position="stacked" >Total Weight kg</ion-label> 
+    <p style="text-align: center;" type="number" >{{tweight}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label style="text-align: center;" position="stacked" >Volumetric Weight kg</ion-label> 
+      <p style="text-align: center;" type="number" >{{vweight}}</p>
+      </ion-item>
 </form>
 </ion-content>

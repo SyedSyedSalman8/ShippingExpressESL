@@ -12,6 +12,11 @@ export class CalculatorPage implements OnInit {
   width: number;
   length: number;
   height: number;
+  weight: number;
+  qty: number;
+  volume: any;
+  tweight: any;
+  vweight: any;
 
   constructor() { }
 
@@ -22,5 +27,8 @@ export class CalculatorPage implements OnInit {
   calculateCBM() {
     this.cbm = (this.width * this.length * this.height) / 1000000;
     console.log(this.cbm);
+    this.volume = (this.cbm * this.qty).toFixed(5);
+    this.tweight = this.weight * this.qty;
+    this.vweight = (this.length * this.height * this.qty * this.width) / 5000;
   }
 }
