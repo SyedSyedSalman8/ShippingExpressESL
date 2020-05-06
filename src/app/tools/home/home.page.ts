@@ -39,4 +39,8 @@ ionViewWillLeave() {
   goToCalc() {
     this.navCtrl.navigateForward('/calculator');
   }
+
+  goToTerms() {
+    this.navCtrl.navigateForward('/tandc');
+  }
 }
