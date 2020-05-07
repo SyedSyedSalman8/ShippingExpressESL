@@ -50,30 +50,30 @@ ionViewWillLeave() {
                 name: 'name1',
                 type: 'text',
                 placeholder: 'Placeholder 1',
-                value: this.data1[i].pol
+                value: 'Pol:' + this.data1[i].pol
               },
               {
                 name: 'name2',
                 type: 'text',
                 id: 'name2-id',
-                value: this.data1[i].pod,
+                value: 'Pod: ' + this.data1[i].pod,
                 placeholder: 'Placeholder 2'
               },
               // multiline input.
               {
                 name: 'paragraph',
                 type: 'textarea',
-                value: this.data1[i].notes
+                value: 'Notes: ' + this.data1[i].notes
               },
               {
                 name: 'name2',
                 type: 'text',
-                value: this.data1[i].rate
+                value: 'Rate: ' + this.data1[i].rate
               },
               {
                 name: 'name2',
                 type: 'text',
-                value: this.data1[i].pod
+                value: 'Equipment: ' + this.data1[i].equip
               }],
             buttons: ['OK']
           });
