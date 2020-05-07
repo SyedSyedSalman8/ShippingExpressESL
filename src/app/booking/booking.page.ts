@@ -32,7 +32,7 @@ ionViewWillLeave() {
 }
 
   ngOnInit() {
-    this.service.getPolPod().subscribe((data: (any)) => this.data = data);
+    this.service.getBookingPp().subscribe((data: (any)) => this.data = data);
 
     this.bookingForm = new FormGroup({
       name: new FormControl(),

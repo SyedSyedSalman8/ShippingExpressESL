@@ -44,4 +44,8 @@ export class ServiceService {
   newBooking(booking: Booking) {
     return this.http.post(this.baseUrl + 'api/api/post/booking.php', booking, this.httpOptions);
   }
+
+  getBookingPp() {
+    return this.http.get(this.baseUrl + 'api/api/post/v2/getAllPorts.php');
+  }
 }
