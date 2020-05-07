@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class BookingPage implements OnInit {
 subscription: any;
 equip: string;
+data: any;
 bookingForm: FormGroup;
 booking: Booking;
 
@@ -31,6 +32,8 @@ ionViewWillLeave() {
 }
 
   ngOnInit() {
+    this.service.getPolPod().subscribe((data: (any)) => this.data = data);
+
     this.bookingForm = new FormGroup({
       name: new FormControl(),
       phone: new FormControl(),
