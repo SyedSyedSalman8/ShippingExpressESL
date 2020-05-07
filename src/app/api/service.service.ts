@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Query } from '../_models/query';
 import { Feedback } from '../_models/feedback';
+import { Booking } from '../_models/booking';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,7 @@ export class ServiceService {
     return this.http.post(this.baseUrl + 'api/api/post/feedback.php', feedback, this.httpOptions);
   }
 
-  newBooking() {}
+  newBooking(booking: Booking) {
+    return this.http.post(this.baseUrl + 'api/api/post/booking.php', booking, this.httpOptions);
+  }
 }

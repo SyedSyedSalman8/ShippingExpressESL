@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, NavController } from '@ionic/angular';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-booking',
@@ -8,6 +9,9 @@ import { Platform, NavController } from '@ionic/angular';
 })
 export class BookingPage implements OnInit {
 subscription: any;
+equip: string;
+bookingForm: FormGroup;
+
   constructor(private platform: Platform, private navCtrl: NavController) { }
   ionViewDidEnter() {
     this.subscription = this.platform.backButton.subscribe(() => {

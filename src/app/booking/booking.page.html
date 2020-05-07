@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="bookingForm" (ngSubmit)="newBooking()">
   <ion-grid>
     <ion-row>
       <ion-col size="5" style="background-color: lightgrey;">
@@ -26,26 +27,48 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="name">  </ion-textarea>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col size="5" style="background-color: lightgrey;">
-        <p style=" vertical-align: middle; line-height: 20px;"> Volume
+        <p style=" vertical-align: middle; line-height: 20px;"> Phone Number
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea formControlName="phone">  </ion-textarea>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p style=" vertical-align: middle; line-height: 20px;"> Equipment
         </p>
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
-            <ion-select-option value="2f">20ft</ion-select-option>
-            <ion-select-option value="4f">40ft</ion-select-option>
-            <ion-select-option value="H">40HC</ion-select-option>
-            <ion-select-option value="A">AIR</ion-select-option>
-            <ion-select-option value="L">LCL</ion-select-option>
+          <ion-select formControlName="equip" [(ngModel)]="equip" placeholder="Select One">
+            <ion-select-option value="tf">20ft</ion-select-option>
+            <ion-select-option value="ff">40ft</ion-select-option>
+            <ion-select-option value="fh">40HC</ion-select-option>
+            <ion-select-option value="AIR">AIR</ion-select-option>
+            <ion-select-option value="LCL">LCL</ion-select-option>
           </ion-select>
        
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="equip === 'AIR' || equip === 'LCL'">
+      <ion-col size="5" style="background-color: lightgrey;">
+        <p  style=" vertical-align: middle; line-height: 20px;"> Volume
+        </p>
+      </ion-col>
+
+      <ion-col size="7" style="background-color: lightgrey;">
+        <ion-textarea formControlName="vol">  </ion-textarea>
       </ion-col>
     </ion-row>
 
@@ -57,7 +80,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="terms" placeholder="Select One">
             <ion-select-option value="C">CNF</ion-select-option>
             <ion-select-option value="F">FOB</ion-select-option>
             <ion-select-option value="E">ExWorks</ion-select-option>
@@ -74,7 +97,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="BLmentioned" placeholder="Select One">
             <ion-select-option value="P">Prepaid</ion-select-option>
             <ion-select-option value="C">Collect</ion-select-option>
             
@@ -93,7 +116,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="tradeLane" placeholder="Select One">
             <ion-select-option value="I">Import</ion-select-option>
             <ion-select-option value="E">Export Select</ion-select-option>
             
@@ -110,7 +133,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="pol" placeholder="Select One">
             <ion-select-option value="I">Import</ion-select-option>
             
           </ion-select>
@@ -126,7 +149,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="pod" placeholder="Select One">
             <ion-select-option value="I">Import</ion-select-option>
           </ion-select>
        
@@ -142,7 +165,7 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="supplierDetails">  </ion-textarea>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -152,7 +175,7 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="CNEEdetails">  </ion-textarea>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -162,7 +185,7 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="notifyCNEE">  </ion-textarea>
       </ion-col>
     </ion-row>
 
@@ -175,7 +198,7 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="cmdty">  </ion-textarea>
       </ion-col>
     </ion-row>
 
@@ -186,7 +209,7 @@
       </ion-col>
 
       <ion-col size="7" style="background-color: lightgrey;">
-        <ion-textarea>  </ion-textarea>
+        <ion-textarea formControlName="grossWeight">  </ion-textarea>
       </ion-col>
     </ion-row>
 
@@ -200,7 +223,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="encashmentCert" placeholder="Select One">
             <ion-select-option value="C">Available</ion-select-option>
             <ion-select-option value="F">Pay Encashment Charges</ion-select-option>
           </ion-select>
@@ -216,7 +239,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="ftaCert" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
@@ -233,7 +256,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="certOfOrigin" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
@@ -250,7 +273,7 @@
 
       <ion-col size="7" style="background-color: lightgrey;">
         
-          <ion-select placeholder="Select One">
+          <ion-select formControlName="exportLiscense" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
@@ -263,9 +286,9 @@
       <label style="font-size: small;">Any Other Requirement (Please mention below)</label>
     </ion-item-divider>
     
-    <ion-textarea placeholder="write here.."></ion-textarea>
+    <ion-textarea formControlName="comments" placeholder="write here.."></ion-textarea>
 
     <ion-button expand="full" type="submit">Submit</ion-button>
     </ion-grid>
-
+  </form>
 </ion-content>
