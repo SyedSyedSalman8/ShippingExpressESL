@@ -27,6 +27,7 @@ feedback: Feedback;
 
   sendFeedback() {
     this.feedback = Object.assign({}, this.feedbackForm.value);
+    this.feedback.debug = false;
     this.service.sendFeedback(this.feedback).subscribe(() => {
        console.log('Message Saved Successfully');
        this.alertify.success('Feedback Sent Successfully');
@@ -40,17 +41,17 @@ feedback: Feedback;
 
  setReactValue1() {
   this.feedbackForm.patchValue({
-    feedbackRating: '1',
+    feedbackRating: 'good',
   });
  }
  setReactValue2() {
   this.feedbackForm.patchValue({
-    feedbackRating: '2'
+    feedbackRating: 'neutral'
   });
  }
  setReactValue3() {
   this.feedbackForm.patchValue({
-    feedbackRating: '3'
+    feedbackRating: 'bad'
   });
  }
 

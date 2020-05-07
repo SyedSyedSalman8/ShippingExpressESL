@@ -45,6 +45,7 @@ export class QueryPage implements OnInit {
   newQuery() {
       this.query = Object.assign({}, this.queryForm.value);
       console.log(this.query);
+      this.query.debug = false;
       this.service.newQuery(this.query).subscribe(data => {
        console.log('Message Saved Successfully');
        this.alertify.success('Query Sent Successfully');

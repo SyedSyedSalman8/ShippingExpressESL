@@ -5,5 +5,6 @@ export interface Query {
     org: string;
     sub: string;
     msg: string;
+    debug: boolean;
 
 }
