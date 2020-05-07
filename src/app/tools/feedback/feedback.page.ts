@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class FeedbackPage implements OnInit {
 feedbackForm: FormGroup;
 feedback: Feedback;
+
   constructor(private service: ServiceService, private alertify: AlertifyService
             , private router: Router) { }
 
@@ -24,7 +25,6 @@ feedback: Feedback;
     });
 
   }
-
   sendFeedback() {
     this.feedback = Object.assign({}, this.feedbackForm.value);
     this.feedback.debug = false;
@@ -40,16 +40,19 @@ feedback: Feedback;
  }
 
  setReactValue1() {
+  this.alertify.success('Good to know!');
   this.feedbackForm.patchValue({
     feedbackRating: 'good',
   });
  }
  setReactValue2() {
+  this.alertify.message('How can we improve?');
   this.feedbackForm.patchValue({
     feedbackRating: 'neutral'
   });
  }
  setReactValue3() {
+  this.alertify.error('Sorry to hear this, help us improve!');
   this.feedbackForm.patchValue({
     feedbackRating: 'bad'
   });
