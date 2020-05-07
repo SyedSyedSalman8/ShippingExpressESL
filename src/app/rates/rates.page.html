@@ -30,8 +30,6 @@
   <div (click)="getContainerRates()">
   <ion-button #populateData  expand="full" type="submit">Search Container Rates</ion-button>
 
-  <div *ngFor="let data of data1">
-    <p *ngIf="term === data.pol && term1 === data.pod"> {{data.idx}} {{data.pod}} yada yda </p>
-  </div>
+  
 </div>
 </ion-content>

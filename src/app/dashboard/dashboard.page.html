@@ -9,7 +9,7 @@
 
 <ion-content [fullscreen]="true">
   <img src="../../assets/emirates"   alt="">
-  <div style="background-color: yellowgreen; height: 50px;">
+  <div style="background-color: navy; height: 50px; color: white;">
      <p style="text-align: center; vertical-align: middle; line-height: 50px;">
      Welcome to Express Shipping
     </p>
@@ -20,8 +20,9 @@
     <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
  
     <ion-avatar (click)="goToQuery()">
-      <img src="../../assets/download.png">
+      <img src="../../assets/query.jpg">
     </ion-avatar>
+
     <ion-label>Query</ion-label>
  
 </ion-col>
@@ -38,7 +39,7 @@
 <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
  
   <ion-avatar (click)="goToTracking()">
-    <img src="../../assets/tracking.png">
+    <img src="../../assets/image032.png">
   </ion-avatar>
   <ion-label>Tracking</ion-label>
 
@@ -50,28 +51,28 @@
 <ion-row>
   <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-    <ion-avatar>
-      <img (click)="goToNews()" src="../../assets/icon-70-512.webp">
-    </ion-avatar>
+    <ion-thumbnail>
+      <img (click)="goToNews()" src="../../assets/news.png">
+    </ion-thumbnail>
     <ion-label>Advisory</ion-label>
  
 </ion-col>
 
 <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-  <ion-avatar>
-    <img (click)="goToRates()" src="../../assets/pulse.png">
-  </ion-avatar>
+  <ion-thumbnail>
+    <img (click)="goToRates()" src="../../assets/rates.png">
+  </ion-thumbnail>
   <ion-label>Rates</ion-label>
 
 </ion-col>
 
     <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-    <ion-avatar (click)="goToTools()">
+    <ion-thumbnail (click)="goToTools()">
       <img src="../../assets/tools.png">
-    </ion-avatar>
-    <ion-label>Tools</ion-label>
+    </ion-thumbnail>
+    <ion-label style="margin-left: 5px;">Tools</ion-label>
  
 </ion-col>
 
