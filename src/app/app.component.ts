@@ -51,6 +51,11 @@ export class AppComponent implements OnInit {
       title: 'Tools',
       url: '/home',
       icon: 'build'
+    },
+    {
+      title: 'Vessel Info',
+      url: '/vessel',
+      icon: 'information-circle'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

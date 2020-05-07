@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'tandc',
     loadChildren: () => import('./tools/tandc/tandc.module').then( m => m.TandcPageModule)
+  },
+  {
+    path: 'vessel',
+    loadChildren: () => import('./vessel/vessel.module').then( m => m.VesselPageModule)
   }
 ];
 

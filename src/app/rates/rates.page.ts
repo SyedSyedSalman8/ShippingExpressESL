@@ -19,7 +19,7 @@ export class RatesPage implements OnInit {
   subscription: any;
   constructor(private service: ServiceService, private platform: Platform,
               private navCtrl: NavController, private alert: AlertController,
-              private alrtify: AlertifyService, private modal: ModalController) { }
+              private alrtify: AlertifyService) { }
 
   ngOnInit() {
     this.service.getPolPod().subscribe((data: (any)) => this.data = data);
