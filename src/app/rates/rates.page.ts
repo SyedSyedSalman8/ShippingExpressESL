@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ServiceService } from '../api/service.service';
-import { NavController, Platform } from '@ionic/angular';
+import { NavController, Platform, AlertController, ModalController } from '@ionic/angular';
+import { AlertifyService } from '../api/alertify.service';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class RatesPage implements OnInit {
   show: any;
   show1: any;
   subscription: any;
-  constructor(private service: ServiceService, private platform: Platform, private navCtrl: NavController) { }
+  constructor(private service: ServiceService, private platform: Platform,
+              private navCtrl: NavController, private alert: AlertController,
+              private alrtify: AlertifyService, private modal: ModalController) { }
 
   ngOnInit() {
     this.service.getPolPod().subscribe((data: (any)) => this.data = data);
@@ -35,9 +38,53 @@ ionViewWillLeave() {
 
 
   getContainerRates() {
-    this.service.getContainerRates().subscribe(data => this.data1 = data);
+    this.service.getContainerRates().subscribe(async data => { 
+      this.data1 = data;
+      for (const i of Object.keys(this.data1)) {
+        if (this.term === this.data1[i].pol && this.term1 === this.data1[i].pod) {
+          const alert = await this.alert.create({
+            header: 'Container Rates',
+            subHeader: 'Details are as follows:',
+            inputs: [
+              {
+                name: 'name1',
+                type: 'text',
+                placeholder: 'Placeholder 1',
+                value: this.data1[i].pol
+              },
+              {
+                name: 'name2',
+                type: 'text',
+                id: 'name2-id',
+                value: this.data1[i].pod,
+                placeholder: 'Placeholder 2'
+              },
+              // multiline input.
+              {
+                name: 'paragraph',
+                type: 'textarea',
+                value: this.data1[i].notes
+              },
+              {
+                name: 'name2',
+                type: 'text',
+                value: this.data1[i].rate
+              },
+              {
+                name: 'name2',
+                type: 'text',
+                value: this.data1[i].pod
+              }],
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    }, error => {
+      this.alrtify.error('Oops something went wrong');
+    });
     console.log(this.term);
-    console.log(this.term1);
+    console.log(this.term1);    
   }
 
   edit(name) {
