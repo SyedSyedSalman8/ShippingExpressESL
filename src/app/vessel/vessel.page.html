@@ -12,54 +12,86 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-label>FCL</ion-label>
+        <p style="text-align: center; font-weight: bold;">FCL</p>
       </ion-col>
       <ion-col>
-        <ion-label>LCL</ion-label>
+        <p style="text-align: center; font-weight: bold;">LCL</p>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
+        <ion-card>
+          <ion-card-header>
       <a href="https://sapt.com.pk/newwebportal" target="_blank">SAPT</a>
+    </ion-card-header>
+    </ion-card>
       </ion-col>
       <ion-col >
+        <ion-card>
+          <ion-card-header>
        <div style="position: relative;" (click)="openBOML()">
         BOML
        </div> 
+      </ion-card-header>
+      </ion-card>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-      <a href="https://www.kictl.com/UsersPanel/VesselSchedule.aspx" target="_blank">KICT</a>
+        <ion-card>
+          <ion-card-header>
+            <a href="https://www.kictl.com/UsersPanel/VesselSchedule.aspx" target="_blank">KICT</a>
+          </ion-card-header>
+        </ion-card>
       </ion-col>
       <ion-col >
-        <div style="position: relative;" (click)="openAICT()">
-         AICT
-        </div> 
+        <ion-card>
+          <ion-card-header>
+            <div style="position: relative;" (click)="openAICT()">
+              AICT
+             </div>
+          </ion-card-header>
+        </ion-card>
        </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-      <a href="https://pict.com.pk/en/vessel-schedule" target="_blank">PICT</a>
+        <ion-card>
+          <ion-card-header>
+            <a href="https://pict.com.pk/en/vessel-schedule" target="_blank">PICT</a>
+          </ion-card-header>
+        </ion-card>
       </ion-col>
       <ion-col >
-        <div style="position: relative;" (click)="openPKSH()">
-         PAK SHAHEEN
-        </div> 
+        <ion-card>
+          <ion-card-header>
+            <div style="position: relative;" (click)="openPKSH()">
+              PAK SHAHEEN
+             </div>
+          </ion-card-header>
+        </ion-card>
        </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-      <a href="http://lfs.qict.com.pk/" target="_blank">QICT</a>
+        <ion-card>
+          <ion-card-header>
+            <a href="http://lfs.qict.com.pk/" target="_blank">QICT</a>
+          </ion-card-header>
+        </ion-card>
       </ion-col>
       <ion-col >
-        <div style="position: relative;" (click)="openNLCT()">
-         NLCT
-        </div> 
+        <ion-card>
+          <ion-card-header>
+            <div style="position: relative;" (click)="openNLCT()">
+              NLCT
+             </div> 
+          </ion-card-header>
+        </ion-card>
        </ion-col>
     </ion-row>
 
@@ -68,9 +100,13 @@
       
       </ion-col>
       <ion-col >
-        <div style="position: relative;" (click)="openBOML()">
-         BAYWEST
-        </div> 
+        <ion-card>
+          <ion-card-header>
+            <div style="position: relative;" (click)="openBAYWEST()">
+              BAYWEST
+             </div>
+          </ion-card-header>
+        </ion-card>
        </ion-col>
     </ion-row>
 

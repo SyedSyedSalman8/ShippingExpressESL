@@ -96,7 +96,7 @@ export class VesselPage implements OnInit {
 
   async openNLCT() {
     const alert = await this.alert.create({
-      header: 'AICT',
+      header: 'NLCT',
       subHeader: 'Headquarters NLC',
       // tslint:disable-next-line: max-line-length
       message: 'National Logistics Cell Kashmir Road. Near R.A Bazar, Rawalpindi Pakistan. Tel: +92 (51) 111 652-000. Email: info@nlc.com.pk. Rawalpindi, PK',
@@ -106,7 +106,7 @@ export class VesselPage implements OnInit {
           value: 'HQ DryPorts: '
         },
         {
-          type: 'text',
+          type: 'textarea',
           // tslint:disable-next-line: max-line-length
           value: 'Head Office Dry Ports & Border Terminals Thokar Niaz Baig, Lahore Pakistan. Tel: +92 (51) 111 652-000. Email: ho.dp@nlc.com.pk. Lahore, PK',
         },
@@ -115,7 +115,7 @@ export class VesselPage implements OnInit {
           value: 'HQ O&M Tolling: '
         },
         {
-          type: 'text',
+          type: 'textarea',
           // tslint:disable-next-line: max-line-length
           value: 'Tolling Head Office. Sowan Camp, Rawalpindi Pakistan. Tel: +92 (51) 111 652-000. Email: ho.tolling@nlc.com.pk. Rawalpindi, PK'
         },
@@ -124,7 +124,7 @@ export class VesselPage implements OnInit {
           value: 'HQ Freight: '
         },
 {
-          type: 'text',
+          type: 'textarea',
           value: 'Head Office Freight Services. Sultanabad Karachi. Tel: +92 (51) 111-652-000. Email: ho.fs@nlc.com.pk. Karachi, Pakistan '
         },
         {
@@ -133,7 +133,7 @@ export class VesselPage implements OnInit {
         },
 
         {
-          type: 'text',
+          type: 'textarea',
           // tslint:disable-next-line: max-line-length
           value: 'Engineers Head Office. Sowan Camp, Rawalpindi Pakistan. Tel: +92 (51) 111-652-000. Email: ho.engrs@nlc.com.pk. Rawalpindi, Pakistan '
         },
@@ -152,6 +152,18 @@ export class VesselPage implements OnInit {
     });
     await alert.present();
   }
+
+  async openBAYWEST() {
+    const alert = await this.alert.create({
+      header: 'BAY WEST',
+      subHeader: 'BAY WEST ADDRESS',
+      // tslint:disable-next-line: max-line-length
+      message: '32 Industrial Area (Opposite KICT In Gate) West Wharf Road, Karachi, Pakistan. Tel: +92 21 32330028-30. Phone: +92 21 35878094-96',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
 
 
 }
