@@ -31,23 +31,23 @@ export class VesselPage implements OnInit {
       message: 'Sabir Khan, Manager CSD. Cell: +92 345 2005409. Muhammad Aslam. Manifest & Document Officer. Cell: +92 345 2005467. muhammad.aslam@aictpk.com. Maria Arif. Line Coordinator. Cell: +92 345 2005307. alerts@aictpk.com',
       inputs: [
         {
-          type: 'text',
+          type: 'textarea',
           value: 'Senior Contact Details: '
         },
         {
-          type: 'text',
+          type: 'textarea',
           value: 'Hussain Islam. Chief Executive Officer',
         },
         {
-          type: 'text',
+          type: 'textarea',
           value: 'Qamar ul Haq. Chief Financial Officer.qamar.ulhaq@aictpk.com'
         },
         {
-          type: 'text',
+          type: 'textarea',
           value: 'Cyrus Kanga. Executive Director Projects. cyrus.kanga@aictpk.com'
         },
         {
-          type: 'text',
+          type: 'textarea',
           value: 'Col. Shahzada Farrukh. Executive Director. shahzada.farrukh@aictpk.com'
         }
 
@@ -75,7 +75,7 @@ export class VesselPage implements OnInit {
           value: 'Empty Container Park JSY: '
         },
         {
-          type: 'text',
+          type: 'textarea',
           // tslint:disable-next-line: max-line-length
           value: 'Plot no 12-13-14-15 Jungle Shah Empty Depot, Keamari, Town Karachi – Pakistan. Email: info@pscs-psg.com. Tel: (+92-21)32851800-5. Facsimile: (+92-21) 3285190',
         },
@@ -84,7 +84,7 @@ export class VesselPage implements OnInit {
           value: 'CFS -Port Qasim'
         },
         {
-          type: 'text',
+          type: 'textarea',
           // tslint:disable-next-line: max-line-length
           value: 'B-1,N.W.I.Z,CFS village, port Muhammad Bin Qasim, Karachi – Pakistan. Email: info@pscs-psg.com. Tel: (+92-21) 34720220-1  (+92-21)37420230-3. Facsimile : (+92-21)34720228'
         }
