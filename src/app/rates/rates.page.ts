@@ -17,6 +17,7 @@ export class RatesPage implements OnInit {
   show: any;
   show1: any;
   subscription: any;
+  match: boolean;
   constructor(private service: ServiceService, private platform: Platform,
               private navCtrl: NavController, private alert: AlertController,
               private alrtify: AlertifyService) { }
@@ -78,13 +79,18 @@ ionViewWillLeave() {
             buttons: ['OK']
           });
           await alert.present();
+        } else {
+          this.match = false;
         }
       }
     }, error => {
       this.alrtify.error('Oops something went wrong');
     });
+    if (this.match === false) {
+      this.alrtify.error('Results do no match!');
+    }
     console.log(this.term);
-    console.log(this.term1);    
+    console.log(this.term1); 
   }
 
   edit(name) {
