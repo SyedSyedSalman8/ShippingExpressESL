@@ -13,7 +13,7 @@ export class NewsPage implements OnInit {
   data: any;
   subscription: any;
   constructor(private alertify: AlertifyService,
-              private linkify: NgxLinkifyjsModule, private service: ServiceService, 
+              private linkify: NgxLinkifyjsModule, private service: ServiceService,
               private navCtrl: NavController, private platform: Platform) { }
 
               ionViewDidEnter() {
@@ -22,11 +22,10 @@ export class NewsPage implements OnInit {
                     this.navCtrl.navigateForward('/dashboard');
                 });
             }
-            
+
             ionViewWillLeave() {
               this.subscription.unsubscribe();
             }
-            
 
   ngOnInit() {
       this.service.getNews().subscribe(data => {

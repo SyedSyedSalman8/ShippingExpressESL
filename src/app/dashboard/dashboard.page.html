@@ -8,7 +8,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <img src="../../assets/emirates"   alt="">
+  <div style="margin-top: 10%;">
+  <img src="../../assets/image005.png" width="100%"   alt="">
+</div>
   <div style="background-color: navy; height: 50px; color: white;">
      <p style="text-align: center; vertical-align: middle; line-height: 50px;">
      Welcome to Express Shipping
@@ -81,4 +83,11 @@
 
 </ion-grid>
 </ion-content>
+
+<ion-footer style="background-color: navy;">
+    <p (click)="goToLogin()" style="color: white; text-align: center;">
+    Login
+  </p>
+
+</ion-footer>
 

@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'vessel',
     loadChildren: () => import('./vessel/vessel.module').then( m => m.VesselPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

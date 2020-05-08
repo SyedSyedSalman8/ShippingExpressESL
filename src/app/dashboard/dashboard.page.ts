@@ -55,4 +55,8 @@ ionViewWillLeave() {
   goToTracking() {
     this.navCtrl.navigateForward('/tracking');
   }
+
+  goToLogin() {
+    this.navCtrl.navigateForward('/login');
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, Platform, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-vessel',
@@ -7,11 +7,22 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./vessel.page.scss'],
 })
 export class VesselPage implements OnInit {
-
-  constructor(private alert: AlertController) { }
+subscription: any;
+  constructor(private alert: AlertController, private platform: Platform, private navCtrl: NavController) { }
 
   ngOnInit() {
   }
+
+  ionViewDidEnter() {
+    this.subscription = this.platform.backButton.subscribe(() => {
+        // tslint:disable-next-line: no-string-literal
+        this.navCtrl.navigateForward('/dashboard');
+    });
+}
+
+ionViewWillLeave() {
+  this.subscription.unsubscribe();
+}
 
   async openBOML() {
     console.log('clicked');

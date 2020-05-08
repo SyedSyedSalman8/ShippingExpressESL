@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" style="background-color: yellowgreen;">
+<ion-header [translucent]="true" style="background-color: navy;">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -9,30 +9,64 @@
 
 <ion-content>
   <form  (ngSubmit)="calculateCBM()" >
+    <ion-grid>
+      <ion-row>
   <ion-item>
-    <ion-label position="stacked" >Length(cm)</ion-label>
-    <ion-input [(ngModel)]="length" name="length" type="number"></ion-input>
+    <ion-col style="border:navy solid 5px;">
+    <ion-label >Length(cm)</ion-label>
+  </ion-col>
+  <ion-col >
+    <ion-input style="background-color: white;" [(ngModel)]="length" placeholder="" name="length" type="number"></ion-input>
+  </ion-col>
   </ion-item>
+</ion-row>
 
-
-<ion-item>
-<ion-label position="stacked" >Width (cm)</ion-label> 
-<ion-input [(ngModel)]="width" name="width" type="number"></ion-input>
-</ion-item>
-
-<ion-item>
-<ion-label position="stacked" >Height (cm)</ion-label> 
-<ion-input [(ngModel)]="height" name="height" type="number"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked" >Weight (kg)</ion-label> 
-  <ion-input [(ngModel)]="weight" name="weight" type="number"></ion-input>
-  </ion-item>
+<ion-row>
   <ion-item>
-    <ion-label position="stacked" >Quantity </ion-label> 
-    <ion-input [(ngModel)]="qty" name="qty" type="number"></ion-input>
+    <ion-col style="border:navy solid 5px;">
+    <ion-label  >Width (cm)</ion-label> 
+  </ion-col>
+  <ion-col>
+    <ion-input style="background-color: white;" [(ngModel)]="width" name="width" type="number"></ion-input>
+  </ion-col>
     </ion-item>
-<ion-button style="margin-top: 5%;" expand="block" color="success" type="submit">Calculate CBM</ion-button>
+</ion-row>
+
+<ion-row>
+  <ion-item>
+    <ion-col style="border:navy solid 5px;">
+      <ion-label  >Height (cm)</ion-label>
+    </ion-col>
+     <ion-col>
+    <ion-input style="background-color: white;" [(ngModel)]="height" name="height" type="number"></ion-input>
+  </ion-col>  
+  </ion-item>
+</ion-row>
+
+<ion-row>
+  <ion-item>
+    <ion-col style="border:navy solid 5px;">
+      <ion-label  >Weight (kg)</ion-label>
+    </ion-col>
+     <ion-col>
+    <ion-input style="background-color: white;" [(ngModel)]="weight" name="weight" type="number"></ion-input>
+  </ion-col>  
+  </ion-item>
+  </ion-row>
+
+  <ion-row>
+    <ion-item>
+      <ion-col style="border:navy solid 5px;">
+        <ion-label  >Quantity (units) </ion-label>
+      </ion-col>
+       <ion-col>
+      <ion-input style="background-color: white;" [(ngModel)]="qty" name="qty" type="number"></ion-input>
+    </ion-col>
+      </ion-item>  
+  </ion-row>
+    </ion-grid>
+
+    <ion-button  expand="block" type="submit">Calculate CBM</ion-button>
 <ion-item>
   <ion-label style="text-align: center;" position="stacked" >CBM m<sup>3</sup></ion-label> 
   <p style="text-align: center;" type="number" >{{cbm}}</p>
