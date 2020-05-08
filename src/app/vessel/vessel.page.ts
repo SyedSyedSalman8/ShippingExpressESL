@@ -57,4 +57,41 @@ export class VesselPage implements OnInit {
     await alert.present();
   }
 
+  async openPKSH() {
+    const alert = await this.alert.create({
+      header: 'PAK SHAHEEN',
+      inputs: [
+        {
+          type: 'text',
+          value: 'CFS KARACHI'
+        },
+        {
+          type: 'textarea',
+          // tslint:disable-next-line: max-line-length
+          value: '24-28 Reclaimed Area, Timber  Pond, Pak Shaheen. Avenue, Keamari, Town Karachi – Pakistan. Email: info@pscs-psg.com. Tel: (+92-21)32851800-5. Facsimile: (+92-21) 3285190. UAN : (+92-21) 111-725-742'
+        },
+        {
+          type: 'text',
+          value: 'Empty Container Park JSY: '
+        },
+        {
+          type: 'text',
+          // tslint:disable-next-line: max-line-length
+          value: 'Plot no 12-13-14-15 Jungle Shah Empty Depot, Keamari, Town Karachi – Pakistan. Email: info@pscs-psg.com. Tel: (+92-21)32851800-5. Facsimile: (+92-21) 3285190',
+        },
+        {
+          type: 'text',
+          value: 'CFS -Port Qasim'
+        },
+        {
+          type: 'text',
+          // tslint:disable-next-line: max-line-length
+          value: 'B-1,N.W.I.Z,CFS village, port Muhammad Bin Qasim, Karachi – Pakistan. Email: info@pscs-psg.com. Tel: (+92-21) 34720220-1  (+92-21)37420230-3. Facsimile : (+92-21)34720228'
+        }
+      ],
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
 }
