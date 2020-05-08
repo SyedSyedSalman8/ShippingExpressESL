@@ -29,7 +29,29 @@ export class VesselPage implements OnInit {
       header: 'AICT',
       // tslint:disable-next-line: max-line-length
       message: 'Sabir Khan, Manager CSD. Cell: +92 345 2005409. Muhammad Aslam. Manifest & Document Officer. Cell: +92 345 2005467. muhammad.aslam@aictpk.com. Maria Arif. Line Coordinator. Cell: +92 345 2005307. alerts@aictpk.com',
-      
+      inputs: [
+        {
+          type: 'text',
+          value: 'Senior Contact Details: '
+        },
+        {
+          type: 'text',
+          value: 'Hussain Islam. Chief Executive Officer',
+        },
+        {
+          type: 'text',
+          value: 'Qamar ul Haq. Chief Financial Officer.qamar.ulhaq@aictpk.com'
+        },
+        {
+          type: 'text',
+          value: 'Cyrus Kanga. Executive Director Projects. cyrus.kanga@aictpk.com'
+        },
+        {
+          type: 'text',
+          value: 'Col. Shahzada Farrukh. Executive Director. shahzada.farrukh@aictpk.com'
+        }
+
+      ],
       buttons: ['OK']
     });
     await alert.present();
