@@ -18,6 +18,8 @@ export class RatesPage implements OnInit {
   show1: any;
   subscription: any;
   match: boolean;
+  count = 0;
+
   constructor(private service: ServiceService, private platform: Platform,
               private navCtrl: NavController, private alert: AlertController,
               private alrtify: AlertifyService) { }
@@ -39,6 +41,8 @@ ionViewWillLeave() {
 
 
   getContainerRates() {
+    this.match = true;
+    this.count = 0;
     this.service.getContainerRates().subscribe(async data => { 
       this.data1 = data;
       for (const i of Object.keys(this.data1)) {
@@ -80,17 +84,19 @@ ionViewWillLeave() {
           });
           await alert.present();
         } else {
-          this.match = false;
+          this.count = this.count + 1;
         }
       }
     }, error => {
       this.alrtify.error('Oops something went wrong');
+    }, () => {
+
+      if (this.count === 4) {
+        this.alrtify.error('Results do no match!');
+      }
     });
-    if (this.match === false) {
-      this.alrtify.error('Results do no match!');
-    }
     console.log(this.term);
-    console.log(this.term1); 
+    console.log(this.term1);
   }
 
   edit(name) {

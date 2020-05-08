@@ -11,18 +11,11 @@ ion-content {
       color: green($color: #ce2da6) !important;
   }
 
-  .rtHeader.rtHeaderCurr {
-      text-align: left;
+  thead {
+    text-align:justify !important;
   }
-  td:nth-child(even) 
-  {
-      background-color: lightgrey;
-      width: 100%;
-  }
-  td:nth-child(odd)
-   {
-       background-color: grey;
-       width: 100%;
-      }
   
+  th.rtHeader.rtHeaderCurr {
+      background-color: navy;
+  }
 
