@@ -10,33 +10,23 @@
 <ion-content>
   
   <p style="font-size: large; font-weight: 900; font:bold; text-align: center;">Headlines from ESL</p>
-  <ion-row>
-    <ion-col>
-      <p style="text-align: center; font-weight: bold;">Headlines:</p>
-    </ion-col>
-    <ion-col>
-      <p style="text-align: center; font-weight: bold;">Details:</p>
-    </ion-col>
-  </ion-row>
+  
   <ion-grid *ngFor="let article of data?.data">
     <ion-row>
-  <ion-col size="5">
     
       <ion-card>
+        <ion-card-header>
         <p style="font-size: 15px; color: navy; font-weight: bold; font-style: italic;">{{article.title}}
         </p>
-      </ion-card>
+      </ion-card-header>
      
-  </ion-col>
-  <ion-col size="7">
-    <ion-card>
-      <ion-card-header>
+    
+      <ion-card-content>
         <div [innerHTML]="article.desc | linkify"> {{article.desc | linkify}}
         </div>
-      </ion-card-header>
-    </ion-card>
+      </ion-card-content>
      
-  </ion-col>    
+    </ion-card>
  
 
 </ion-row>
