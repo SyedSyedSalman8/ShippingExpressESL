@@ -94,4 +94,64 @@ export class VesselPage implements OnInit {
     await alert.present();
   }
 
+  async openNLCT() {
+    const alert = await this.alert.create({
+      header: 'AICT',
+      subHeader: 'Headquarters NLC',
+      // tslint:disable-next-line: max-line-length
+      message: 'National Logistics Cell Kashmir Road. Near R.A Bazar, Rawalpindi Pakistan. Tel: +92 (51) 111 652-000. Email: info@nlc.com.pk. Rawalpindi, PK',
+      inputs: [
+        {
+          type: 'text',
+          value: 'HQ DryPorts: '
+        },
+        {
+          type: 'text',
+          // tslint:disable-next-line: max-line-length
+          value: 'Head Office Dry Ports & Border Terminals Thokar Niaz Baig, Lahore Pakistan. Tel: +92 (51) 111 652-000. Email: ho.dp@nlc.com.pk. Lahore, PK',
+        },
+        {
+          type: 'text',
+          value: 'HQ O&M Tolling: '
+        },
+        {
+          type: 'text',
+          // tslint:disable-next-line: max-line-length
+          value: 'Tolling Head Office. Sowan Camp, Rawalpindi Pakistan. Tel: +92 (51) 111 652-000. Email: ho.tolling@nlc.com.pk. Rawalpindi, PK'
+        },
+        {
+          type: 'text',
+          value: 'HQ Freight: '
+        },
+{
+          type: 'text',
+          value: 'Head Office Freight Services. Sultanabad Karachi. Tel: +92 (51) 111-652-000. Email: ho.fs@nlc.com.pk. Karachi, Pakistan '
+        },
+        {
+          type: 'text',
+          value: 'HQ Engineers: '
+        },
+
+        {
+          type: 'text',
+          // tslint:disable-next-line: max-line-length
+          value: 'Engineers Head Office. Sowan Camp, Rawalpindi Pakistan. Tel: +92 (51) 111-652-000. Email: ho.engrs@nlc.com.pk. Rawalpindi, Pakistan '
+        },
+        {
+          type: 'text',
+          value: 'HQ NEFT: '
+        },
+        {
+          type: 'text',
+          value: 'NEFT Head Office. Sowan Camp, Rawalpindi Pakistan. Tel: +92 (51) 111 652-000. Email: ho.neft@nlc.com.pk. Rawalpindi, PK'
+        }
+
+
+      ],
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+
 }
