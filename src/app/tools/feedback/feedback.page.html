@@ -40,16 +40,16 @@
       
         <ion-item >
             <ion-label position="stacked">Comment</ion-label>   
-        <ion-textarea formControlName="feedback" style="border-color: black; border-radius: 10px; border-style: double; height: 150px;"  placeholder="Optional.."></ion-textarea>
+        <ion-textarea formControlName="feedback" style="border-color: black; border-radius: 10px; border-style: solid; height: 150px;"  placeholder="Optional.."></ion-textarea>
           </ion-item>
      
 
       <ion-item>
         <ion-label position="stacked">Email</ion-label>
-        <ion-input formControlName="email" style="border-color: black; border-radius: 10px; border-style: double;"  placeholder="Optional.."></ion-input>
+        <ion-input formControlName="email" style="border-color: black; border-radius: 10px; border-style: solid;"  placeholder="Optional.."></ion-input>
       </ion-item>
       </ion-grid>
-      <ion-button style="margin-top: 10%;" expand="block" color="success" type="submit">Submit Feedback</ion-button>
+      <ion-button style="margin-top: 10%; " expand="block" type="submit">Submit Feedback</ion-button>
       <input [hidden]="true" type="text" formControlName="feedbackRating" >
     </form>
 </ion-content>

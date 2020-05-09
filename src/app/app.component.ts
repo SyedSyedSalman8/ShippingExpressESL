@@ -13,6 +13,11 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
+      title: 'Login',
+      url: '/login',
+      icon: 'log-in'
+    },
+    {
       title: 'Dashboard',
       url: '/dashboard',
       icon: 'clipboard'
@@ -57,6 +62,7 @@ export class AppComponent implements OnInit {
       url: '/vessel',
       icon: 'information-circle'
     }
+
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
