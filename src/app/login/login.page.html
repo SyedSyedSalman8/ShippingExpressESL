@@ -1,9 +1,9 @@
-<ion-header [translucent]="true" style="background-color: navy;">
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-title style="color: white;">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,5 +22,5 @@
   <ion-input type="password"></ion-input>
 </ion-card>
 
-<ion-button (click)="login()" expand="full" type="submit">Login</ion-button>
+<ion-button (click)="login()" expand="block" style="--background:navy;" type="submit">Login</ion-button>
 </ion-content>

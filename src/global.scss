@@ -27,3 +27,19 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+ion-content {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.new-background-color{
+    --background: navy;
+}
+
+ion-button {
+    --background:navy ;
+}
+
+ion-title {
+    color: white;
+}
+
