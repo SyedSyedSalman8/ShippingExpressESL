@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ServiceService } from '../api/service.service';
 import { Platform, NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-exchange',
   templateUrl: './exchange.page.html',
   styleUrls: ['./exchange.page.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ExchangePage implements OnInit {
   data: any;

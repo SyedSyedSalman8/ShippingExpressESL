@@ -13,6 +13,14 @@ ion-item {
   background-color: lightgrey;
 }
 
+.new-background-color{
+  --background: navy;
+}
+
+ion-input {
+  background-color: white;
+}
+
     ion-content {
         --background: url('../../assets/bgimage3.jpeg')  fixed ;
         top: 0; 

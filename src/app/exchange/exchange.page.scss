@@ -7,15 +7,42 @@ ion-content {
 
   }
 
-  a{
-      color: green($color: #ce2da6) !important;
-  }
-
-  thead {
-    text-align:justify !important;
-  }
   
-  th.rtHeader.rtHeaderCurr {
-      background-color: navy;
-  }
+thead.innerHTML {
+    background-color: red;
+}
+ 
+  .new-background-color{
+    --background: navy;
+}
 
+thead {
+    text-align: center;
+        vertical-align: middle;
+        line-height: 3em;
+}
+
+.rtHeader.rtHeaderCurr{
+    background-color: grey;
+}
+.rtHeader.rtHeaderValues {
+background-color: grey;
+}
+
+tr:nth-child(even) 
+{
+    background-color: grey;
+    width: 100%;
+}
+tr:nth-child(odd)
+ {
+     background-color: lightgrey;
+     width: 100%;
+    }
+
+    tr>td {
+        padding-bottom: 1em;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 3em;
+      }

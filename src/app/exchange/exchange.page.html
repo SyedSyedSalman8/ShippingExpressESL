@@ -1,22 +1,14 @@
-<style>
-  thead {
-    text-align:justify;
-  }
-  td {
-    color: chartreuse;
-  }
-</style>
-<ion-header [translucent]="true" style="background-color: navy;">
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Exchange Rates</ion-title>
+    <ion-title style="color: white;">Exchange Rates</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  <div [innerHTML]="data?.html"></div>
+  <div  [innerHTML]="data?.html"></div>
 
 </ion-content>
