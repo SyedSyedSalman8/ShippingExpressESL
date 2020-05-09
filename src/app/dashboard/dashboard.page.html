@@ -1,9 +1,9 @@
-<ion-header [translucent]="true" style="background-color: navy;">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title style="color: white;">
       Dashboard
     </ion-title>
   </ion-toolbar>
@@ -22,13 +22,12 @@
 <ion-grid>
   <ion-row>
     <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
- 
+      
     <ion-avatar (click)="goToQuery()">
-      <img src="../../assets/query.jpg">
+      <img src="../../assets/query.png">
     </ion-avatar>
-
-    <ion-label style="margin-left: 5%;">Query</ion-label>
- 
+    <ion-label style="margin-left: 8%;">Query</ion-label>
+  
 </ion-col>
 
 <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
@@ -36,14 +35,16 @@
   <ion-avatar (click)="goToBooking()">
     <img src="../../assets/booking.png">
   </ion-avatar>
-  <ion-label>Booking</ion-label>
+  <ion-label style="font-size: 11px;
+  margin-left: 3%;
+  font-weight: 600;">Booking</ion-label>
 
 </ion-col>
 
 <ion-col  style="margin-left: 5%; margin-top: 60px; margin-bottom: 60px;">
  
   <ion-avatar (click)="goToTracking()">
-    <img src="../../assets/image032.png">
+    <img src="../../assets/tracking.png">
   </ion-avatar>
   <ion-label>Tracking</ion-label>
 
@@ -55,28 +56,28 @@
 <ion-row>
   <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-    <ion-thumbnail>
+    <ion-avatar>
       <img (click)="goToNews()" src="../../assets/news.png">
-    </ion-thumbnail>
+    </ion-avatar>
     <ion-label>Advisory</ion-label>
  
 </ion-col>
 
 <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-  <ion-thumbnail>
+  <ion-avatar>
     <img (click)="goToRates()" src="../../assets/rates.png">
-  </ion-thumbnail>
-  <ion-label>Rates</ion-label>
+  </ion-avatar>
+  <ion-label style="margin-left:7%;">Rates</ion-label>
 
 </ion-col>
 
     <ion-col  style="margin-left: 5%; margin-bottom: 60px;">
  
-    <ion-thumbnail (click)="goToTools()">
+    <ion-avatar (click)="goToTools()">
       <img src="../../assets/tools.png">
-    </ion-thumbnail>
-    <ion-label style="margin-left: 5px;">Tools</ion-label>
+    </ion-avatar>
+    <ion-label style="margin-left: 9%;">Tools</ion-label>
  
 </ion-col>
 

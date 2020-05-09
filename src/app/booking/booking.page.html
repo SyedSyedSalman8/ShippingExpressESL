@@ -1,9 +1,9 @@
-<ion-header [translucent]="true" style="background-color: navy;">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Booking</ion-title>
+    <ion-title style="color: white;">Booking</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +17,7 @@
       </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
        <p style="font-weight: bold;">
         Information
       </p>
@@ -30,7 +30,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="name">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -41,7 +41,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-input type="number" formControlName="phone">  </ion-input>
       </ion-col>
     </ion-row>
@@ -52,7 +52,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="equip" [(ngModel)]="equip" placeholder="Select One">
             <ion-select-option value="tf">20ft</ion-select-option>
@@ -71,7 +71,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="vol">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -82,7 +82,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="terms" placeholder="Select One">
             <ion-select-option value="C">CNF</ion-select-option>
@@ -99,7 +99,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="BLmentioned" placeholder="Select One">
             <ion-select-option value="P">Prepaid</ion-select-option>
@@ -118,7 +118,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="tradeLane" placeholder="Select One">
             <ion-select-option value="I">Import</ion-select-option>
@@ -135,7 +135,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="pol" placeholder="Select One">
             <ion-select-option *ngFor="let data of data?.pols" value="{{data?.name}}">{{data?.name}}</ion-select-option>
@@ -151,7 +151,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="pod" placeholder="Select One">
             <ion-select-option *ngFor="let data of data?.pods" value="{{data?.name}}">{{data?.name}}</ion-select-option>
@@ -168,7 +168,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="supplierDetails">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -178,7 +178,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="CNEEdetails">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -188,7 +188,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="notifyCNEE">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -201,7 +201,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-textarea formControlName="cmdty">  </ion-textarea>
       </ion-col>
     </ion-row>
@@ -212,7 +212,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         <ion-input type="number" formControlName="grossWeight">  </ion-input>
       </ion-col>
     </ion-row>
@@ -225,7 +225,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="encashmentCert" placeholder="Select One">
             <ion-select-option value="C">Available</ion-select-option>
@@ -241,7 +241,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="ftaCert" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
@@ -258,7 +258,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="certOfOrigin" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
@@ -275,7 +275,7 @@
         </p>
       </ion-col>
 
-      <ion-col size="7" style="background-color: lightgrey;">
+      <ion-col size="7">
         
           <ion-select formControlName="exportLiscense" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
