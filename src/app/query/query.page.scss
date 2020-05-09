@@ -3,9 +3,23 @@ ion-item {
  }
 
  ion-content {
-     background-color: grey;
+    --background: url('../../assets/bgimage3.jpeg') repeat;
  }
 
  form {
     background-color: lightgrey;
 }
+
+.new-background-color{
+    --background: navy;
+}
+
+ion-input {
+    background-color: white;
+}
+
+ion-textarea {
+    background-color: white;
+}
+
+
