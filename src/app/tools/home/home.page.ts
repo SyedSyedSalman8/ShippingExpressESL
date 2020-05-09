@@ -43,4 +43,8 @@ ionViewWillLeave() {
   goToTerms() {
     this.navCtrl.navigateForward('/tandc');
   }
+
+  goToContainer() {
+    this.navCtrl.navigateForward('/container');
+  }
 }
