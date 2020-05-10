@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
+  showSplash = true;
   public appPages = [
     {
       title: 'Dashboard',
@@ -77,7 +79,10 @@ export class AppComponent implements OnInit {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      // this.splashScreen.show();
+      this.splashScreen.hide();
+
+      timer(3000).subscribe(() => this.showSplash = false); // <-- hide animation after 3s
+
     });
   }
 

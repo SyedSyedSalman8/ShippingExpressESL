@@ -10,7 +10,7 @@
 <ion-content>
   <div style=" margin-top: 20%; background-color: lightgrey;">
     <ion-item>
-    <ion-label  position="stacked">POL: </ion-label>
+    <ion-label  style="margin-bottom: 5%;" position="stacked">POL: </ion-label>
     <ion-input [(ngModel)]="term" (keyup)="toggle()" placeholder="Search POL" name = "pol"></ion-input>
     <div  (click)=edit(data?.name) *ngFor="let data of data?.pols| filter:term">
     <p *ngIf="show === true">
@@ -21,7 +21,7 @@
 </div>
   <div style="margin-bottom: 20%; margin-top: 20%; background-color: lightgrey;">
     <ion-item>
-    <ion-label  position="stacked">POD: </ion-label>
+    <ion-label style="margin-bottom: 5%;" position="stacked">POD: </ion-label>
     <ion-input (keyup)="toggle1()" placeholder="Search POD" [(ngModel)]="term1" name = "pod"></ion-input>
     <div (click)=edit1(data?.name) *ngFor="let data of data?.pods| filter:term1">
     <p *ngIf="show1 === true">

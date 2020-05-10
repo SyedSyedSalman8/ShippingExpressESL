@@ -11,33 +11,33 @@
 
 <ion-content [fullscreen]="true">
 <form [formGroup]="queryForm" class="form-inline my-2 my-lg-0" (ngSubmit)="newQuery()">
- <ion-item class="form-group" style="margin-bottom: 18px; margin-top: 20px;">
-    <ion-label  position="stacked">Name <span style="color: red;">*</span></ion-label>
+ <ion-item class="form-group" style=" margin-top: 20px;">
+    <ion-label style="margin-bottom:5%;" position="stacked">Name <span style="color: red;">*</span></ion-label>
     <ion-input formControlName ="name"></ion-input>
   </ion-item>
 
- <ion-item style="margin-bottom: 18px;">
-    <ion-label  position="stacked">Email <span style="color: red;">*</span></ion-label>
+ <ion-item >
+    <ion-label style="margin-bottom:5%;" position="stacked">Email <span style="color: red;">*</span></ion-label>
     <ion-input formControlName="email"></ion-input>
   </ion-item>
 
- <ion-item style="margin-bottom: 18px;">
-    <ion-label position="stacked">Phone <span style="color: red;">*</span></ion-label>
+ <ion-item >
+    <ion-label style="margin-bottom:5%;" position="stacked">Phone <span style="color: red;">*</span></ion-label>
     <ion-input type="number" formControlName="phone" ></ion-input>
   </ion-item>
 
- <ion-item style="margin-bottom: 18px;">
-    <ion-label position="stacked">Organization</ion-label>
+ <ion-item >
+    <ion-label style="margin-bottom:5%;" position="stacked">Organization</ion-label>
     <ion-input formControlName="org"></ion-input>
   </ion-item>
 
-  <ion-item style="margin-bottom: 18px;">
-    <ion-label position="stacked">Subject</ion-label>
+  <ion-item >
+    <ion-label style="margin-bottom:5%;" position="stacked">Subject</ion-label>
     <ion-input formControlName="sub"></ion-input>
   </ion-item>
 
  <ion-item style="margin-bottom: 18px;">
-    <ion-label position="stacked">Message <span style="color: red;">*</span></ion-label>
+    <ion-label style="margin-bottom:5%;" position="stacked">Message <span style="color: red;">*</span></ion-label>
     <ion-textarea formControlName="msg" required ></ion-textarea>
     </ion-item>
 
