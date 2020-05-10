@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      timer(3000).subscribe(() => this.showSplash = false); // <-- hide animation after 3s
+      timer(5000).subscribe(() => this.showSplash = false); // <-- hide animation after 3s
 
     });
   }
