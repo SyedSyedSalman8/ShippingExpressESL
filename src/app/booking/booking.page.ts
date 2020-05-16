@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, NavController } from '@ionic/angular';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Booking } from '../_models/booking';
 import { ServiceService } from '../api/service.service';
 import { AlertifyService } from '../api/alertify.service';
@@ -35,8 +35,8 @@ ionViewWillLeave() {
     this.service.getBookingPp().subscribe((data: (any)) => this.data = data);
 
     this.bookingForm = new FormGroup({
-      name: new FormControl(),
-      phone: new FormControl(),
+      name: new FormControl('' , Validators.required),
+      phone: new FormControl('', Validators.required),
       equip: new FormControl(),
       vol: new FormControl(),
       terms: new FormControl(),
@@ -58,6 +58,7 @@ ionViewWillLeave() {
   }
 
   newBooking() {
+     if (this.bookingForm.valid) {
     this.booking = Object.assign({}, this.bookingForm.value);
     this.booking.debug = false;
     this.service.newBooking(this.booking).subscribe(() => {
@@ -69,6 +70,9 @@ ionViewWillLeave() {
       }, () => {
           this.router.navigate(['/dashboard']);
       });
+    } else {
+      this.alertify.error('Please fill all required fields');
+    }
   }
 
 }

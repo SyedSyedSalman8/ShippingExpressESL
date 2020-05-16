@@ -10,50 +10,22 @@
 <ion-content>
   <form [formGroup]="bookingForm" (ngSubmit)="newBooking()">
   <ion-grid>
-    <ion-row>
-      <ion-col size="5" >
-        <p style="font-weight: bold;">
-        Description
-      </p>
-      </ion-col>
 
-      <ion-col size="7">
-       <p style="font-weight: bold;">
-        Information
-      </p>
-      </ion-col>
-    </ion-row>
+    <ion-item>  
+      <ion-label style="margin-bottom:5%;" position="stacked">Name <span style="color: red;">*</span></ion-label>
+        <ion-input required formControlName="name">  </ion-input>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Customer Name
-        </p>
-      </ion-col>
+    <ion-item>
+     
+      <ion-label style="margin-bottom:5%;" position="stacked">Phone Number <span style="color: red;">*</span></ion-label>
+        <ion-input required type="number" formControlName="phone">  </ion-input>
+     
+    </ion-item>
 
-      <ion-col size="7">
-        <ion-textarea formControlName="name">  </ion-textarea>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Phone Number
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        <ion-input type="number" formControlName="phone">  </ion-input>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Equipment
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
+    <ion-item>
+    
+      <ion-label style="margin-bottom:5%;" position="stacked">Equipment </ion-label>
           <ion-select okText="Select" cancelText="Cancel" formControlName="equip" [(ngModel)]="equip" placeholder="Select One">
             <ion-select-option value="tf">20ft</ion-select-option>
             <ion-select-option value="ff">40ft</ion-select-option>
@@ -62,236 +34,145 @@
             <ion-select-option value="LCL">LCL</ion-select-option>
           </ion-select>
        
-      </ion-col>
-    </ion-row>
+    
+    </ion-item>
 
-    <ion-row *ngIf="equip === 'AIR' || equip === 'LCL'">
-      <ion-col size="5" >
-        <p  style=" vertical-align: middle; line-height: 20px;"> Volume
-        </p>
-      </ion-col>
+    <ion-item *ngIf="equip === 'AIR' || equip === 'LCL'">
+      <ion-label style="margin-bottom:5%;" position="stacked">Volume</ion-label>
+      
+        <ion-input formControlName="vol">  </ion-input>
+     
+    </ion-item>
 
-      <ion-col size="7">
-        <ion-textarea formControlName="vol">  </ion-textarea>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Terms
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Terms</ion-label>   
           <ion-select okText="Select" cancelText="Cancel" formControlName="terms" placeholder="Select One">
             <ion-select-option value="C">CNF</ion-select-option>
             <ion-select-option value="F">FOB</ion-select-option>
             <ion-select-option value="E">ExWorks</ion-select-option>
           </ion-select>
        
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> BL Mentioned
-        </p>
-      </ion-col>
+    </ion-item>
 
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">BL Mentioned</ion-label>
           <ion-select okText="Select" cancelText="Cancel" formControlName="BLmentioned" placeholder="Select One">
             <ion-select-option value="P">Prepaid</ion-select-option>
             <ion-select-option value="C">Collect</ion-select-option>
             
           </ion-select>
        
-      </ion-col>
-    </ion-row>
+
+    </ion-item>
+
     <ion-item-divider>
     </ion-item-divider>
     
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Trade Lane
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Trade Lane</ion-label>
           <ion-select okText="Select" cancelText="Cancel" formControlName="tradeLane" placeholder="Select One">
             <ion-select-option value="I">Import</ion-select-option>
             <ion-select-option value="E">Export Select</ion-select-option>
             
           </ion-select>
-       
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Port Of Loading
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Port Of Loading</ion-label>  
           <ion-select okText="Select" cancelText="Cancel" formControlName="pol" placeholder="Select One">
             <ion-select-option *ngFor="let data of data?.pols" value="{{data?.name}}">{{data?.name}}</ion-select-option>
             
           </ion-select>
-       
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Port of Discharge
-        </p>
-      </ion-col>
+    </ion-item>
 
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Port Of Discharge</ion-label>
           <ion-select okText="Select" cancelText="Cancel" formControlName="pod" placeholder="Select One">
             <ion-select-option *ngFor="let data of data?.pods" value="{{data?.name}}">{{data?.name}}</ion-select-option>
           </ion-select>
-       
-      </ion-col>
-    </ion-row>
+
+    </ion-item>
 
     <ion-item-divider></ion-item-divider>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Supplier Details
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Supplier Details</ion-label>
         <ion-textarea formControlName="supplierDetails">  </ion-textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> CNEE Details
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
+     
+    </ion-item>
+    
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">CNEE Details</ion-label>
         <ion-textarea formControlName="CNEEdetails">  </ion-textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Notify/CNEE
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
+      
+    </ion-item>
+    
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Notify/CNEE</ion-label>
         <ion-textarea formControlName="notifyCNEE">  </ion-textarea>
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
     <ion-item-divider></ion-item-divider>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Desp/Commodity
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
+    <ion-item><ion-label style="margin-bottom:5%;" position="stacked">Desp/Commodity</ion-label>
         <ion-textarea formControlName="cmdty">  </ion-textarea>
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Gross Weight(KGS)
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Gross Weight (KGS)</ion-label>
         <ion-input type="number" formControlName="grossWeight">  </ion-input>
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
     <ion-item-divider></ion-item-divider>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Encashment Certificate
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
-          <ion-select okText="Select" cancelText="Cancel" formControlName="encashmentCert" placeholder="Select One">
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Encashment Certificate</ion-label>
+                <ion-select okText="Select" cancelText="Cancel" formControlName="encashmentCert" placeholder="Select One">
             <ion-select-option value="C">Available</ion-select-option>
             <ion-select-option value="F">Pay Encashment Charges</ion-select-option>
           </ion-select>
        
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> FTA Certificate
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">FTA Certificate</ion-label>        
           <ion-select okText="Select" cancelText="Cancel" formControlName="ftaCert" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
           </ion-select>
-       
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Certificate of Origin (COO)
-        </p>
-      </ion-col>
+    </ion-item>
 
-      <ion-col size="7">
-        
+    <ion-item>
+     <ion-label style="margin-bottom:5%;" position="stacked">Certificate Of Origin(COO)</ion-label>
           <ion-select okText="Select" cancelText="Cancel" formControlName="certOfOrigin" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="F">Not Confirmed Yet</ion-select-option>
           </ion-select>
        
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="5" >
-        <p style=" vertical-align: middle; line-height: 20px;"> Export License (Origin)
-        </p>
-      </ion-col>
-
-      <ion-col size="7">
-        
-          <ion-select okText="Select" cancelText="Cancel" formControlName="exportLiscense" placeholder="Select One">
+    <ion-item>
+      <ion-label style="margin-bottom:5%;" position="stacked">Export License (Origin)</ion-label>
+            <ion-select okText="Select" cancelText="Cancel" formControlName="exportLiscense" placeholder="Select One">
             <ion-select-option value="C">YES (Required)</ion-select-option>
             <ion-select-option value="F">Not Required</ion-select-option>
             <ion-select-option value="NFC">Not Confirmed Yet</ion-select-option>
           </ion-select>
-       
-      </ion-col>
-    </ion-row>
+    </ion-item>
 
     <ion-item-divider>
-      <label style="font-size: small;">Any Other Requirement (Please mention below)</label>
+
     </ion-item-divider>
     
+    <ion-item style="margin-bottom: 10%;">
+      <ion-label style="margin-bottom:5%;" position="stacked">Any Other Requirement (Please mention below)</ion-label>
     <ion-textarea formControlName="comments" placeholder="write here.."></ion-textarea>
-
+  </ion-item>
     <ion-button style="--background:navy;" expand="block" type="submit">Submit</ion-button>
     </ion-grid>
   </form>
