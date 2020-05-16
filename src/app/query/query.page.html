@@ -13,17 +13,17 @@
 <form [formGroup]="queryForm" class="form-inline my-2 my-lg-0" (ngSubmit)="newQuery()">
  <ion-item class="form-group" style=" margin-top: 20px;">
     <ion-label style="margin-bottom:5%;" position="stacked">Name <span style="color: red;">*</span></ion-label>
-    <ion-input formControlName ="name"></ion-input>
+    <ion-input required formControlName ="name"></ion-input>
   </ion-item>
 
  <ion-item >
     <ion-label style="margin-bottom:5%;" position="stacked">Email <span style="color: red;">*</span></ion-label>
-    <ion-input formControlName="email"></ion-input>
+    <ion-input required formControlName="email"></ion-input>
   </ion-item>
 
  <ion-item >
     <ion-label style="margin-bottom:5%;" position="stacked">Phone <span style="color: red;">*</span></ion-label>
-    <ion-input type="number" formControlName="phone" ></ion-input>
+    <ion-input required type="number" formControlName="phone" ></ion-input>
   </ion-item>
 
  <ion-item >
@@ -38,7 +38,7 @@
 
  <ion-item style="margin-bottom: 18px;">
     <ion-label style="margin-bottom:5%;" position="stacked">Message <span style="color: red;">*</span></ion-label>
-    <ion-textarea formControlName="msg" required ></ion-textarea>
+    <textarea  required formControlName="msg" required ></textarea>
     </ion-item>
 
     <ion-button  style="--background:navy;" expand="block" type="submit">Submit</ion-button>

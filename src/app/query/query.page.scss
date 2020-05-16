@@ -1,14 +1,5 @@
-ion-item {
-    --background: url('../../assets/bgimage3.jpeg') repeat;
- }
 
- ion-content {
-    --background: url('../../assets/bgimage3.jpeg') repeat;
- }
 
- form {
-    background-color: lightgrey;
-}
 
 .new-background-color{
     --background: navy;
@@ -16,10 +7,17 @@ ion-item {
 
 ion-input {
     background-color: white;
+    border: grey 2px solid;
 }
 
-ion-textarea {
+
+textarea {
     background-color: white;
+    border: grey 2px solid;
+    width: 100%;
+    height: 100px;
 }
+
+
 
 

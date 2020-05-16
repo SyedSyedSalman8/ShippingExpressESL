@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../api/service.service';
 import { Router } from '@angular/router';
 import { Query } from '../_models/query';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastController, Platform, NavController } from '@ionic/angular';
 import { AlertifyService } from '../api/alertify.service';
 
@@ -33,16 +33,17 @@ export class QueryPage implements OnInit {
 
   ngOnInit() {
     this.queryForm = new FormGroup({
-      email: new FormControl(),
-      name: new FormControl(),
-      phone: new FormControl(),
+      email: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
       org: new FormControl(),
       sub: new FormControl(),
-      msg: new FormControl()
+      msg: new FormControl('', Validators.required)
     });
   }
 
   newQuery() {
+    if (this.queryForm.valid) { 
       this.query = Object.assign({}, this.queryForm.value);
       console.log(this.query);
       this.query.debug = false;
@@ -55,7 +56,11 @@ export class QueryPage implements OnInit {
       }, () => {
           this.router.navigate(['/dashboard']);
       });
+ } else {
+  this.alertify.error('Please fill all required fields');
+}
  }
+
   }
 
 
