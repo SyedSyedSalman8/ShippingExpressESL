@@ -1,11 +1,8 @@
 table{
     background-color: green($color: #000000);
+    width: 100%;
 }
 
-ion-content {
-    --background: url('../../assets/bgimage3.jpeg') repeat;
-
-  }
 
   
 thead.innerHTML {
@@ -23,10 +20,10 @@ thead {
 }
 
 .rtHeader.rtHeaderCurr{
-    background-color: grey;
+    background-color: white;
 }
 .rtHeader.rtHeaderValues {
-background-color: grey;
+background-color: white;
 }
 a{
     color: navy;
@@ -34,7 +31,7 @@ a{
 
 tr:nth-child(even) 
 {
-    background-color: grey;
+    background-color: white;
     width: 100%;
 }
 tr:nth-child(odd)
