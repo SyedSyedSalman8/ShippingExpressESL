@@ -1,0 +1,28 @@
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Rates' Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <div *ngFor="let data of value3;">
+  <ion-card color="light" *ngIf="value1 === data.pol">
+    <ion-header><p>
+      Details for this container rate:
+    </p></ion-header>
+    <ion-card-content>
+
+
+  <p>POL: {{data.pol}} </p>
+<p>POD:  {{data.pod}} </p>
+ <p>Rate: {{data.rate}} </p>
+  <p>Equip: {{data.equip}} </p>
+  <p>Notes: {{data.notes}} </p>
+</ion-card-content>
+</ion-card>
+</div>
+</ion-content>

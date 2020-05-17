@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertifyService } from './api/alertify.service';
 import { NgxLinkifyjsModule } from 'ngx-linkifyjs';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DetailsPageModule } from './rates/details/details.module';
 
 @NgModule({
    declarations: [
@@ -33,6 +34,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
       StatusBar,
       SplashScreen,
       AlertifyService
+   ],
+   exports: [
+      DetailsPageModule
    ],
    bootstrap: [
       AppComponent

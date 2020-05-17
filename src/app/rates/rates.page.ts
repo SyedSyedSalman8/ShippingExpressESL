@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ServiceService } from '../api/service.service';
 import { NavController, Platform, AlertController, ModalController } from '@ionic/angular';
 import { AlertifyService } from '../api/alertify.service';
+import { NavigationExtras } from '@angular/router';
+
+
 
 
 @Component({
@@ -40,41 +43,25 @@ ionViewWillLeave() {
 }
 
 
-  getContainerRates() {
-    this.match = true;
-    this.count = 0;
-    this.service.getContainerRates().subscribe(async data => {
-      this.data1 = data;
-      for (const i of Object.keys(this.data1)) {
-        if (this.term === this.data1[i].pol && this.term1 === this.data1[i].pod) {
-          const alert = await this.alert.create({
-            header: 'Container Rates ',
-            subHeader: 'Details are as follows: ',
-            message: '<div>' +
-            '<p> POL: ' + this.data1[i].pol + '</p>' +
-            '<p> POD: ' + this.data1[i].pod + '</p>' +
-            '<p>Notes: ' + this.data1[i].notes + '</p>' +
-            '<p>Rate: ' + this.data1[i].rate + '</p>' +
-            '<p> Equipment: ' + this.data1[i].equip + '</p>' +
-            '</div>',
-            buttons: ['OK']
-          });
-          await alert.present();
-        } else {
-          this.count = this.count + 1;
-        }
-      }
-    }, error => {
-      this.alrtify.error('Oops something went wrong');
-    }, () => {
+getContainerRates () {
 
-      if (this.count === 4) {
-        this.alrtify.error('Results do no match!');
-      }
-    });
-    console.log(this.term);
-    console.log(this.term1);
-  }
+  this.service.getContainerRates().subscribe( data => {
+    this.data1 = data;
+  }, error => {
+    this.alrtify.error('ERROR');
+  });
+  console.log(this.data1);
+  console.log(this.term + ' ' + this.term1);
+  let navigationExtras: NavigationExtras = {
+    state: {
+        t1: this.term,
+        t2: this.term1,
+        d1: this.data1
+    }
+};
+  this.navCtrl.navigateForward(['/rates/details'], navigationExtras);
+}
+
 
   edit(name) {
     this.term = name;
