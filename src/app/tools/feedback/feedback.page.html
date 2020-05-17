@@ -39,13 +39,18 @@
 
       
         <ion-item >
-            <ion-label position="stacked">Comment</ion-label>   
+            <ion-label style="margin-bottom:5%;" position="stacked">Comment</ion-label>   
         <ion-textarea formControlName="feedback" style="border-color: black; border-radius: 10px; border-style: solid; height: 150px;"  placeholder="Optional.."></ion-textarea>
           </ion-item>
      
+          <ion-item>
+            <ion-label style="margin-bottom:5%;" position="stacked">Name/Company</ion-label>
+            <ion-input formControlName="name" style="border-color: black; border-radius: 10px; border-style: solid;"  placeholder="Optional.."></ion-input>
+          </ion-item>
+
 
       <ion-item>
-        <ion-label position="stacked">Email</ion-label>
+        <ion-label style="margin-bottom:5%;" position="stacked">Email/Tel</ion-label>
         <ion-input formControlName="email" style="border-color: black; border-radius: 10px; border-style: solid;"  placeholder="Optional.."></ion-input>
       </ion-item>
       </ion-grid>

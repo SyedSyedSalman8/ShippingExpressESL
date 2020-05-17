@@ -21,7 +21,8 @@ feedback: Feedback;
     this.feedbackForm = new FormGroup({
       feedbackRating: new FormControl(),
       feedback: new FormControl(),
-      email: new FormControl()
+      email: new FormControl(),
+      name: new FormControl()
     });
 
   }
