@@ -9,32 +9,36 @@
 
 <ion-content>
   <ion-grid>
-    <ion-row style="background-color: darkgray;">
+    <ion-card (click)="goToProfile()" color="light">
       <p>
       ESL Profile
     </p>
-    </ion-row>
-    <ion-row (click)="goToAbout()" style="background-color: lightgray;">
+    </ion-card>
+    <ion-card (click)="goToAbout()" color="light">
       <p> About ESL
       </p>
-    </ion-row>
-    <ion-row (click)="goToCalc()" style="background-color: darkgray;">
+    </ion-card>
+
+    <ion-card (click)="goToCalc()" color="light">
      <p>CBM Calculator</p> 
-    </ion-row>
-    <ion-row (click)="goToContainer()" style="background-color: lightgray;">
+    </ion-card>
+
+    <ion-card (click)="goToContainer()" color="light">
      <p>Container Specification</p>  
-    </ion-row>
-    <ion-row (click)="goToFeedback()" style="background-color: darkgray;">
+    </ion-card>
+    <ion-card (click)="goToFeedback()" color="light">
      <p> Feedback </p>
-    </ion-row>
-    <ion-row (click)="goToContact()" style="background-color: lightgray;">
+    </ion-card>
+
+    <ion-card (click)="goToContact()" color="light">
       <p> Contact Us
       </p>
-    </ion-row>
-    <ion-row (click)="goToTerms()" style="background-color: darkgray;">
+    </ion-card>
+
+    <ion-card (click)="goToTerms()" color="light">
       <p> Terms And Conditions
       </p>
-    </ion-row>
+    </ion-card>
   </ion-grid>
 
 </ion-content>

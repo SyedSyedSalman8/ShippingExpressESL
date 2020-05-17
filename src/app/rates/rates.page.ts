@@ -43,7 +43,7 @@ ionViewWillLeave() {
   getContainerRates() {
     this.match = true;
     this.count = 0;
-    this.service.getContainerRates().subscribe(async data => { 
+    this.service.getContainerRates().subscribe(async data => {
       this.data1 = data;
       for (const i of Object.keys(this.data1)) {
         if (this.term === this.data1[i].pol && this.term1 === this.data1[i].pod) {

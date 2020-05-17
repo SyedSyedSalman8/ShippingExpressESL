@@ -32,6 +32,10 @@ ionViewWillLeave() {
     this.navCtrl.navigateForward('/about');
   }
 
+  goToProfile() {
+    window.location.href = 'http://express-shipping.com/ESLPROFILE.pdf'
+  }
+
   goToContact() {
     this.navCtrl.navigateForward('/contact');
   }
@@ -41,7 +45,7 @@ ionViewWillLeave() {
   }
 
   goToTerms() {
-    this.navCtrl.navigateForward('/tandc');
+    window.location.href = ' http://express-shipping.com/Terms&Condition.pdf';
   }
 
   goToContainer() {
