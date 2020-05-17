@@ -48,38 +48,15 @@ ionViewWillLeave() {
       for (const i of Object.keys(this.data1)) {
         if (this.term === this.data1[i].pol && this.term1 === this.data1[i].pod) {
           const alert = await this.alert.create({
-            header: 'Container Rates',
-            subHeader: 'Details are as follows:',
-            inputs: [
-              {
-                name: 'name1',
-                type: 'text',
-                placeholder: 'Placeholder 1',
-                value: 'Pol:' + this.data1[i].pol
-              },
-              {
-                name: 'name2',
-                type: 'text',
-                id: 'name2-id',
-                value: 'Pod: ' + this.data1[i].pod,
-                placeholder: 'Placeholder 2'
-              },
-              // multiline input.
-              {
-                name: 'paragraph',
-                type: 'textarea',
-                value: 'Notes: ' + this.data1[i].notes
-              },
-              {
-                name: 'name2',
-                type: 'text',
-                value: 'Rate: ' + this.data1[i].rate
-              },
-              {
-                name: 'name2',
-                type: 'text',
-                value: 'Equipment: ' + this.data1[i].equip
-              }],
+            header: 'Container Rates ',
+            subHeader: 'Details are as follows: ',
+            message: '<div>' +
+            '<p> POL: ' + this.data1[i].pol + '</p>' +
+            '<p> POD: ' + this.data1[i].pod + '</p>' +
+            '<p>Notes: ' + this.data1[i].notes + '</p>' +
+            '<p>Rate: ' + this.data1[i].rate + '</p>' +
+            '<p> Equipment: ' + this.data1[i].equip + '</p>' +
+            '</div>',
             buttons: ['OK']
           });
           await alert.present();
