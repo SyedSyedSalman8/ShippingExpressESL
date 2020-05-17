@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.page.html',
   styleUrls: ['./calculator.page.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CalculatorPage implements OnInit {
   calCBM: FormGroup;
