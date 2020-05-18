@@ -9,6 +9,7 @@
 
 
 <ion-content >
+  <h1 style="text-align: center;">Total rates found:  <span>{{value4}}</span> </h1>
   <div *ngFor="let data of value3; let l = count">
   <ion-card color="light" #abc *ngIf="value1 === data.pol && value2 ===data.pod">
     <ion-header><p>

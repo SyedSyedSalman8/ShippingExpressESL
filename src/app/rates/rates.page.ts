@@ -43,7 +43,7 @@ ionViewWillLeave() {
 }
 
 
-getContainerRates () {
+getContainerRates() {
   this.count = 0;
   this.service.getContainerRates().subscribe(data => {
     this.data1 = data;
@@ -57,21 +57,16 @@ getContainerRates () {
   }, error => {
     this.alrtify.error('Oops something went wrong');
   }, () => {
-    console.log(this.count);
-    console.log('we r here1');
     if (this.count === 0) {
       this.alrtify.error('Results do no match!');
     } else {
-      let navigationExtras: NavigationExtras = {
+      const navigationExtras: NavigationExtras = {
         state: {
             t1: this.term,
             t2: this.term1,
-            d1: this.data1
+            d1: this.count
         }
     };
-      console.log(this.count);
-      console.log('we r here');
-
       this.navCtrl.navigateForward(['/rates/details'], navigationExtras);
     }
   });
@@ -84,7 +79,6 @@ getContainerRates () {
   });
   console.log(this.data1);
   console.log(this.term + ' ' + this.term1); */
-  
 }
 
 
