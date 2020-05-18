@@ -44,22 +44,47 @@ ionViewWillLeave() {
 
 
 getContainerRates () {
+  this.count = 0;
+  this.service.getContainerRates().subscribe(data => {
+    this.data1 = data;
+    for (const i of Object.keys(this.data1)) {
+      if (this.term === this.data1[i].pol && this.term1 === this.data1[i].pod) {
+        this.count = this.count + 1;
+        console.log(this.term + ' ' + this.data1[i].pol);
+        console.log(this.term1 + ' ' + this.data1[i].pod);
+      }
+    }
+  }, error => {
+    this.alrtify.error('Oops something went wrong');
+  }, () => {
+    console.log(this.count);
+    console.log('we r here1');
+    if (this.count === 0) {
+      this.alrtify.error('Results do no match!');
+    } else {
+      let navigationExtras: NavigationExtras = {
+        state: {
+            t1: this.term,
+            t2: this.term1,
+            d1: this.data1
+        }
+    };
+      console.log(this.count);
+      console.log('we r here');
 
-  this.service.getContainerRates().subscribe( data => {
+      this.navCtrl.navigateForward(['/rates/details'], navigationExtras);
+    }
+  });
+
+
+ /* this.service.getContainerRates().subscribe( data => {
     this.data1 = data;
   }, error => {
     this.alrtify.error('ERROR');
   });
   console.log(this.data1);
-  console.log(this.term + ' ' + this.term1);
-  let navigationExtras: NavigationExtras = {
-    state: {
-        t1: this.term,
-        t2: this.term1,
-        d1: this.data1
-    }
-};
-  this.navCtrl.navigateForward(['/rates/details'], navigationExtras);
+  console.log(this.term + ' ' + this.term1); */
+  
 }
 
 

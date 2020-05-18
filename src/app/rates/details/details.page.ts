@@ -15,7 +15,8 @@ export class DetailsPage implements OnInit {
   value1: any;
   value2: any;
   value3: any;
-
+  val = 0;
+  val1: string;
   constructor(private route: ActivatedRoute,
               private service: ServiceService, private router: Router, private alertify: AlertifyService) { 
     this.route.queryParams.subscribe(params => {

@@ -9,10 +9,10 @@
 
 
 <ion-content >
-  <div *ngFor="let data of value3;">
-  <ion-card color="light" *ngIf="value1 === data.pol">
+  <div *ngFor="let data of value3; let l = count">
+  <ion-card color="light" #abc *ngIf="value1 === data.pol && value2 ===data.pod">
     <ion-header><p>
-      Details for this container rate:
+      Details for this container rate: 
     </p></ion-header>
     <ion-card-content>
 
@@ -24,5 +24,10 @@
   <p>Notes: {{data.notes}} </p>
 </ion-card-content>
 </ion-card>
+
 </div>
+
+
+
+
 </ion-content>
