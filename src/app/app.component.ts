@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   showSplash = true;
   public appPages = [
     {
-      title: 'Dashboard',
+      title: 'Home',
       url: '/dashboard',
       icon: 'clipboard'
     },

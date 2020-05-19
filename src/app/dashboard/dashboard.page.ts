@@ -32,9 +32,9 @@ ionViewWillLeave() {
   this.subscription.unsubscribe();
 }
 
-  goToQuery() {
+  goToVessel() {
     // this.navCtrl.navigateForward('/query');
-    this.router.navigate(['/query']);
+    this.router.navigate(['/vessel']);
   }
 
   goToNews() {
