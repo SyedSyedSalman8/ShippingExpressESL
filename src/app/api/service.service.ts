@@ -48,4 +48,8 @@ export class ServiceService {
   getBookingPp() {
     return this.http.get(this.baseUrl + 'api/api/post/v2/getAllPorts.php');
   }
+
+  getTracking() {
+    return this.http.get(this.baseUrl + 'api/api/post/read_ronum.php');
+  }
 }

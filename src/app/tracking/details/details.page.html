@@ -1,0 +1,195 @@
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tracking Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p>RO #</p>
+        </ion-col>
+        <ion-col>
+<p>
+  {{bldata?.ronum}}
+</p>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <p>MBL</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.mbl}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>HBL</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.hbl}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Customer</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.customer}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Shipper</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.consignee}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>POL</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.pol}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>POD</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.pod}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>ETD</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.etd}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>ETA</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.eta}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Equipment</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.equip}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Volume</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.volume}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row *ngIf="bldata?.equip === 'FCL'">
+  <ion-col>
+    <p>Container</p>
+  </ion-col>
+  <ion-col>
+<p *ngFor="let i of bldata?.containers">
+  {{i.containerno}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Gross Weight</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.gw}}
+</p>
+</ion-col>
+</ion-row>
+
+
+<ion-row>
+  <ion-col>
+    <p>Net Weight</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.nw}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Freight Term</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.ft}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p>Customer Status</p>
+  </ion-col>
+  <ion-col>
+<p>
+  {{bldata?.cs}}
+</p>
+</ion-col>
+</ion-row>
+
+<ion-row *ngIf="bldata?.equip === 'FCL'">
+  <a target="_blank" class="button1" [href]="goToTracking()">View Tracking</a>
+</ion-row>
+
+</ion-grid>
+</ion-card>
+</ion-content>
