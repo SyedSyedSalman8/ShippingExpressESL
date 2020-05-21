@@ -120,6 +120,11 @@ ion-item.selected {
   --color: var(--ion-color-primary);
 }
 
+ion-avatar {
+  --border-radius: 10%;
+  width: 40px;
+  height: 40px;
+}
 
 .splash {
   position: absolute;

@@ -14,6 +14,7 @@ import { AlertifyService } from './api/alertify.service';
 import { NgxLinkifyjsModule } from 'ngx-linkifyjs';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DetailsPageModule } from './rates/details/details.module';
+import { UnescapePipe } from './unescape.pipe';
 
 @NgModule({
    declarations: [

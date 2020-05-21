@@ -8,6 +8,8 @@ import { DetailsPageRoutingModule } from './details-routing.module';
 
 import { DetailsPage } from './details.page';
 
+import { UnescapePipe } from 'src/app/unescape.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { DetailsPage } from './details.page';
     IonicModule,
     DetailsPageRoutingModule
   ],
-  declarations: [DetailsPage]
+  declarations: [DetailsPage
+  , UnescapePipe]
 })
 export class DetailsPageModule {}
