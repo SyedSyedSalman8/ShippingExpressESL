@@ -81,7 +81,7 @@ blTrackDetails() {
     console.log(this.rtype + ' ' + this.bldata.equip);
     if (this.rtype === undefined) {
       this.alertify.error('Please Select RO Type');
-    } else if (this.rtype !== undefined) {
+    } else if (this.bldata.idx !== '-1') {
     const navigationExtras: NavigationExtras = {
       state: {
           t1: this.bldata
