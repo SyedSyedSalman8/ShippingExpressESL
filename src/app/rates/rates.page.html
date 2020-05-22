@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -8,34 +8,62 @@
 </ion-header>
 
 <ion-content>
-  <ion-card style=" border: black 2px solid;">
-  <ion-header style="background-color: #389ab3; color:  white; padding-left: 6%;  font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-    Search 
-  </ion-header>
-    <ion-item >
-    <ion-label  style="margin-bottom: 5%;" position="stacked">POL: </ion-label>
-    <ion-input [(ngModel)]="term" (keyup)="toggle()" placeholder="Search POL" name = "pol"></ion-input>
-    <div (click)=edit(data?.name) *ngFor="let data of data?.pols| filter:term">
-    <p *ngIf="show === true">
-      {{data.name}}
-    </p> 
-  </div>
-</ion-item>
-    <ion-item style="margin-bottom: 10%;"> 
-    <ion-label style="margin-bottom: 5%;" position="stacked">POD: </ion-label>
-    <ion-input (keyup)="toggle1()" placeholder="Search POD" [(ngModel)]="term1" name = "pod"></ion-input>
-    <div (click)=edit1(data?.name) *ngFor="let data of data?.pods| filter:term1">
-    <p *ngIf="show1 === true">
-        {{data.name}} 
-      </p>
-    </div>
-  </ion-item>
-
-</ion-card>
-
+  <ion-card style="border: black 2px solid;">
+    <ion-header
+      style="
+        background-color: #389ab3;
+        color: white;
+        padding-left: 6%;
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      Search
+    </ion-header>
+    <ion-item>
+      <ion-label style="margin-bottom: 5%;" position="stacked">POL: </ion-label>
+      <ion-input
+        [(ngModel)]="term"
+        (keyup)="toggle()"
+        placeholder="Search POL"
+        name="pol"
+      ></ion-input>
+      <div
+        (click)="edit(data?.name)"
+        *ngFor="let data of data?.pols| filter:term"
+      >
+        <p *ngIf="show === true">
+          {{data.name}}
+        </p>
+      </div>
+    </ion-item>
+    <ion-item style="margin-bottom: 10%;">
+      <ion-label style="margin-bottom: 5%;" position="stacked">POD: </ion-label>
+      <ion-input
+        (keyup)="toggle1()"
+        placeholder="Search POD"
+        [(ngModel)]="term1"
+        name="pod"
+      ></ion-input>
+      <div
+        (click)="edit1(data?.name)"
+        *ngFor="let data of data?.pods| filter:term1"
+      >
+        <p *ngIf="show1 === true">
+          {{data.name}}
+        </p>
+      </div>
+    </ion-item>
+  </ion-card>
 
   <div (click)="getContainerRates()">
-  <ion-button  #populateData style="--background:navy; background-color: lightgrey;" expand="block" type="submit">Search Container Rates</ion-button>
-
-</div>
+    <ion-button
+      #populateData
+      style="--background: navy; background-color: lightgrey;"
+      expand="block"
+      type="submit"
+      >Search Container Rates</ion-button
+    >
+  </div>
 </ion-content>

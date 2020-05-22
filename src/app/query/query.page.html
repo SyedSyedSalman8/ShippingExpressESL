@@ -1,5 +1,4 @@
-
-<ion-header >
+<ion-header>
   <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -8,40 +7,59 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [fullscreen]="true">
-<form [formGroup]="queryForm" class="form-inline my-2 my-lg-0" (ngSubmit)="newQuery()">
- <ion-item class="form-group" style=" margin-top: 20px;">
-    <ion-label style="margin-bottom:5%;" position="stacked">Name <span style="color: red;">*</span></ion-label>
-    <ion-input required formControlName ="name"></ion-input>
-  </ion-item>
-
- <ion-item >
-    <ion-label style="margin-bottom:5%;" position="stacked">Email <span style="color: red;">*</span></ion-label>
-    <ion-input required formControlName="email"></ion-input>
-  </ion-item>
-
- <ion-item >
-    <ion-label style="margin-bottom:5%;" position="stacked">Phone <span style="color: red;">*</span></ion-label>
-    <ion-input required type="number" formControlName="phone" ></ion-input>
-  </ion-item>
-
- <ion-item >
-    <ion-label style="margin-bottom:5%;" position="stacked">Organization</ion-label>
-    <ion-input formControlName="org"></ion-input>
-  </ion-item>
-
-  <ion-item >
-    <ion-label style="margin-bottom:5%;" position="stacked">Subject</ion-label>
-    <ion-input formControlName="sub"></ion-input>
-  </ion-item>
-
- <ion-item style="margin-bottom: 18px;">
-    <ion-label style="margin-bottom:5%;" position="stacked">Message <span style="color: red;">*</span></ion-label>
-    <textarea  required formControlName="msg" required ></textarea>
+  <form
+    [formGroup]="queryForm"
+    class="form-inline my-2 my-lg-0"
+    (ngSubmit)="newQuery()"
+  >
+    <ion-item class="form-group" style="margin-top: 20px;">
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Name <span style="color: red;">*</span></ion-label
+      >
+      <ion-input required formControlName="name"></ion-input>
     </ion-item>
 
-    <ion-button  style="--background:navy;" expand="block" type="submit">Submit</ion-button>
+    <ion-item>
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Email <span style="color: red;">*</span></ion-label
+      >
+      <ion-input required formControlName="email"></ion-input>
+    </ion-item>
 
-</form>
+    <ion-item>
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Phone <span style="color: red;">*</span></ion-label
+      >
+      <ion-input required type="number" formControlName="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Organization</ion-label
+      >
+      <ion-input formControlName="org"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Subject</ion-label
+      >
+      <ion-input formControlName="sub"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-bottom: 18px;">
+      <ion-label style="margin-bottom: 5%;" position="stacked"
+        >Message <span style="color: red;">*</span></ion-label
+      >
+      <textarea required formControlName="msg" required></textarea>
+    </ion-item>
+
+    <ion-button
+      style="--background: navy; margin-right: 5%; margin-left: 5%;"
+      expand="block"
+      type="submit"
+      >Submit</ion-button
+    >
+  </form>
 </ion-content>

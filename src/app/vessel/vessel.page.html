@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -6,7 +6,6 @@
     <ion-title style="color: white;">Vessel Information</ion-title>
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content>
   <ion-grid>
@@ -23,18 +22,23 @@
       <ion-col>
         <ion-card color="light">
           <ion-card-header>
-      <a href="https://sapt.com.pk/newwebportal" target="_blank">SAPT</a>
-    </ion-card-header>
-    </ion-card>
+            <a
+              href="https://sapt.com.pk/newwebportal"
+              style="color: black;"
+              target="_blank"
+              >SAPT</a
+            >
+          </ion-card-header>
+        </ion-card>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <ion-card color="light">
           <ion-card-header>
-       <div style="position: relative;" (click)="openBOML()">
-        BOML
-       </div> 
-      </ion-card-header>
-      </ion-card>
+            <div style="position: relative;" (click)="openBOML()">
+              BOML
+            </div>
+          </ion-card-header>
+        </ion-card>
       </ion-col>
     </ion-row>
 
@@ -42,74 +46,86 @@
       <ion-col>
         <ion-card color="light">
           <ion-card-header>
-            <a href="https://www.kictl.com/UsersPanel/VesselSchedule.aspx" target="_blank">KICT</a>
+            <a
+              href="https://www.kictl.com/UsersPanel/VesselSchedule.aspx"
+              target="_blank"
+              style="color: black;"
+              >KICT</a
+            >
           </ion-card-header>
         </ion-card>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <ion-card color="light">
           <ion-card-header>
             <div style="position: relative;" (click)="openAICT()">
               AICT
-             </div>
+              <span style="font-size: x-small;">(Al Hamd Terminal)</span>
+            </div>
           </ion-card-header>
         </ion-card>
-       </ion-col>
+      </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
         <ion-card color="light">
           <ion-card-header>
-            <a href="https://pict.com.pk/en/vessel-schedule" target="_blank">PICT</a>
+            <a
+              href="https://pict.com.pk/en/vessel-schedule"
+              style="color: black;"
+              target="_blank"
+              >PICT</a
+            >
           </ion-card-header>
         </ion-card>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <ion-card color="light">
           <ion-card-header>
             <div style="position: relative;" (click)="openPKSH()">
               PAK SHAHEEN
-             </div>
+            </div>
           </ion-card-header>
         </ion-card>
-       </ion-col>
+      </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
         <ion-card color="light">
           <ion-card-header>
-            <a href="http://lfs.qict.com.pk/" target="_blank">QICT</a>
+            <a
+              href="http://lfs.qict.com.pk/"
+              style="color: black;"
+              target="_blank"
+              >QICT</a
+            >
           </ion-card-header>
         </ion-card>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <ion-card color="light">
           <ion-card-header>
             <div style="position: relative;" (click)="openNLCT()">
               NLCT
-             </div> 
+            </div>
           </ion-card-header>
         </ion-card>
-       </ion-col>
+      </ion-col>
     </ion-row>
 
     <ion-row>
+      <ion-col> </ion-col>
       <ion-col>
-      
-      </ion-col>
-      <ion-col >
         <ion-card color="light">
           <ion-card-header>
             <div style="position: relative;" (click)="openBAYWEST()">
               BAYWEST
-             </div>
+            </div>
           </ion-card-header>
         </ion-card>
-       </ion-col>
+      </ion-col>
     </ion-row>
-
   </ion-grid>
-
 </ion-content>
