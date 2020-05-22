@@ -9,6 +9,9 @@
 
 
 <ion-content>
+  <div *ngIf="showSplash" class="splash">
+    <div class="spinner"></div>
+  </div>
   <div  [innerHTML]="data?.html"></div>
 
 </ion-content>

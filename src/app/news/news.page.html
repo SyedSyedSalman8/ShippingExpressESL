@@ -9,6 +9,10 @@
 
 <ion-content>
   
+  <div *ngIf="showSplash" class="splash">
+    <div class="spinner"></div>
+  </div>
+
   <p style="font-size: large; font-weight: 900; font:bold; text-align: center;">Headlines from ESL</p>
   
   <ion-grid *ngFor="let article of data?.data">

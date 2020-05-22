@@ -12,6 +12,8 @@ import { NavController, Platform } from '@ionic/angular';
 export class NewsPage implements OnInit {
   data: any;
   subscription: any;
+  showSplash = true;
+
   constructor(private alertify: AlertifyService,
               private linkify: NgxLinkifyjsModule, private service: ServiceService,
               private navCtrl: NavController, private platform: Platform) { }
@@ -30,6 +32,9 @@ export class NewsPage implements OnInit {
   ngOnInit() {
       this.service.getNews().subscribe(data => {
       this.data = data;
+      this.showSplash = false;
+    }, error => {
+      this.alertify.error('Something went wrong');
     });
   }
 
