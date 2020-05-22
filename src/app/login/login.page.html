@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -8,19 +8,30 @@
 </ion-header>
 
 <ion-content>
-<ion-card>
-  <ion-label position="stacked">
-    Username
-  </ion-label>
-  <ion-input type="text"></ion-input>
-</ion-card>
+  <br />
+  <br />
+  <br />
+  <div style="margin-right: auto; margin-left: auto;">
+    <ion-card>
+      <ion-label position="stacked">
+        Username
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-card>
 
-<ion-card>
-  <ion-label position="stacked">
-    Password
-  </ion-label>
-  <ion-input type="password"></ion-input>
-</ion-card>
+    <ion-card>
+      <ion-label position="stacked">
+        Password
+      </ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-card>
+  </div>
 
-<ion-button (click)="login()" expand="block" style="--background:navy;" type="submit">Login</ion-button>
+  <ion-button
+    (click)="login()"
+    expand="block"
+    style="--background: navy; margin-right: 5%; margin-left: 5%;"
+    type="submit"
+    >Login</ion-button
+  >
 </ion-content>

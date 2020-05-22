@@ -1,7 +1,6 @@
-
-  <div *ngIf="showSplash" class="splash">
-    <div class="spinner"></div>
-  </div>
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner"></div>
+</div>
 
 <ion-app>
   <ion-split-pane contentId="main-content">
@@ -9,50 +8,71 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Express Shipping</ion-list-header>
-          
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+          <ion-menu-toggle
+            auto-hide="false"
+            *ngFor="let p of appPages; let i = index"
+          >
+            <ion-item
+              (click)="selectedIndex = i"
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              [class.selected]="selectedIndex == i"
+            >
+              <ion-icon
+                slot="start"
+                [ios]="p.icon + '-outline'"
+                [md]="p.icon + '-sharp'"
+              ></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
-          <ion-item-divider>
-          </ion-item-divider>
+          <ion-item-divider> </ion-item-divider>
           <ion-grid>
             <ion-row>
               <ion-col>
-                <a target="_blank" href="https://www.facebook.com/Express-Shipping-Logistics-532903930546456/">
-                <ion-avatar >
-                  <img src="../assets/facebook.png">
-                </ion-avatar>
-              </a>
-              </ion-col>
-              <ion-col>
-                <a target="_blank" href="https://twitter.com/express_mnisar?s=08">
-                <ion-avatar>
-                  <img src="../assets/twitter.png">
-                </ion-avatar>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/Express-Shipping-Logistics-532903930546456/"
+                >
+                  <ion-avatar>
+                    <img src="../assets/facebook.png" />
+                  </ion-avatar>
                 </a>
               </ion-col>
               <ion-col>
-                <a target="_blank" href="https://www.linkedin.com/company/express-shipping">
-                <ion-avatar>
-                  <img src="../assets/linkedin.png">
-                </ion-avatar>
-              </a>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/express_mnisar?s=08"
+                >
+                  <ion-avatar>
+                    <img src="../assets/twitter.png" />
+                  </ion-avatar>
+                </a>
               </ion-col>
               <ion-col>
-                <ion-avatar>
-                  <img src="../assets/skype.png">
-                </ion-avatar>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/express-shipping"
+                >
+                  <ion-avatar>
+                    <img src="../assets/linkedin.png" />
+                  </ion-avatar>
+                </a>
+              </ion-col>
+              <ion-col>
+                <a target="_blank" href="skype:Muhammed.nisar3?chat">
+                  <ion-avatar>
+                    <img src="../assets/skype.png" />
+                  </ion-avatar>
+                </a>
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-list>
-
-
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
