@@ -60,7 +60,7 @@ ionViewWillLeave() {
   newBooking() {
      if (this.bookingForm.valid) {
     this.booking = Object.assign({}, this.bookingForm.value);
-    this.booking.debug = false;
+    this.booking.debug = true;
     this.service.newBooking(this.booking).subscribe(() => {
        console.log('Message Saved Successfully');
        this.alertify.success('Booking generated Successfully');

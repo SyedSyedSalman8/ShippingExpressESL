@@ -28,7 +28,7 @@ feedback: Feedback;
   }
   sendFeedback() {
     this.feedback = Object.assign({}, this.feedbackForm.value);
-    this.feedback.debug = false;
+    this.feedback.debug = true;
     this.service.sendFeedback(this.feedback).subscribe(() => {
        console.log('Message Saved Successfully');
        this.alertify.success('Feedback Sent Successfully');
