@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://express-shipping.com/'
+  baseUrl: 'https://cors-anywhere.herokuapp.com/http://express-shipping.com/'
 };
 
 /*

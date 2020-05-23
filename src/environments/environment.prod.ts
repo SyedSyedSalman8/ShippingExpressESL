@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://express-shipping.com/'
+  baseUrl: 'https://cors-anywhere.herokuapp.com/http://express-shipping.com/'
 };
